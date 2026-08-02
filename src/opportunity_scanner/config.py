@@ -18,10 +18,16 @@ class Settings:
     digest_hour: int
     timezone: str
     state_path: Path
+    alert_log_path: Path
     http_timeout_seconds: float
 
     @classmethod
-    def from_env(cls, env: Mapping[str, str] | None = None) -> "Settings":
+    def from_env(
+        cls,
+        env: Mapping[str, str] | None = None,
+        *,
+        require_telegram: bool = True,
+    ) -> "Settings":
         values = os.environ if env is None else env
         bot_token = values.get("TELEGRAM_BOT_TOKEN", "").strip()
         raw_chat_ids = values.get("TELEGRAM_CHAT_IDS", "")
@@ -30,9 +36,9 @@ class Settings:
                 part.strip() for part in raw_chat_ids.split(",") if part.strip()
             )
         )
-        if not bot_token:
+        if require_telegram and not bot_token:
             raise ValueError("TELEGRAM_BOT_TOKEN is required")
-        if not chat_ids:
+        if require_telegram and not chat_ids:
             raise ValueError("TELEGRAM_CHAT_IDS is required")
 
         raw_aliases = values.get("GALXE_SPACE_ALIASES", "")
@@ -54,5 +60,6 @@ class Settings:
             digest_hour=int(values.get("DIGEST_HOUR", "19")),
             timezone=values.get("TIMEZONE", "Europe/Belgrade").strip(),
             state_path=Path(values.get("STATE_PATH", "data/state.json")),
+            alert_log_path=Path(values.get("ALERT_LOG_PATH", "data/alerts.jsonl")),
             http_timeout_seconds=float(values.get("HTTP_TIMEOUT_SECONDS", "15")),
         )
