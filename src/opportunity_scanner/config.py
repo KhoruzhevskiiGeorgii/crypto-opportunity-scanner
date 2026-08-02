@@ -57,7 +57,7 @@ class Settings:
             min_score=min_score,
             immediate_reward_usd=int(values.get("IMMEDIATE_REWARD_USD", "20")),
             urgent_hours=int(values.get("URGENT_HOURS", "48")),
-            digest_hour=int(values.get("DIGEST_HOUR", "19")),
+            digest_hour=int(values.get("DIGEST_HOUR", "9")),
             timezone=values.get("TIMEZONE", "Europe/Belgrade").strip(),
             state_path=Path(values.get("STATE_PATH", "data/state.json")),
             alert_log_path=Path(values.get("ALERT_LOG_PATH", "data/alerts.jsonl")),
