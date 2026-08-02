@@ -1,6 +1,675 @@
 {
-  "version": 1,
-  "items": {},
-  "pending_digest": {},
-  "last_success": {}
+  "items": {
+    "github:3883921310": {
+      "deadline": null,
+      "digest_sent_at": null,
+      "fingerprint": "35e5ac45a52468ad2b92e7925691af4546bc1a49ab8de75ee6ed8a3d59a6124e",
+      "immediate_sent_at": null,
+      "reward_usd": "5"
+    },
+    "github:3904303864": {
+      "deadline": null,
+      "digest_sent_at": null,
+      "fingerprint": "4856c7276ab888152ba41e7592ce85c2a979b91139ae56d9d7928b6b36da05cc",
+      "immediate_sent_at": null,
+      "reward_usd": "0.10"
+    },
+    "github:4022852570": {
+      "deadline": null,
+      "digest_sent_at": null,
+      "fingerprint": "4e3ca1d755bf10b7ee9bc619428c6af35adaf626635b411f50d0378f8b9d6a70",
+      "immediate_sent_at": "2026-08-02T01:01:48.096470+00:00",
+      "reward_usd": "100"
+    },
+    "github:4227389983": {
+      "deadline": "2026-04-08T00:00:00+00:00",
+      "digest_sent_at": null,
+      "fingerprint": "5e97e6f27d7532a999a40782bcb42cea83486febe91b1af6c41bce22d5600519",
+      "immediate_sent_at": null,
+      "reward_usd": "15"
+    },
+    "github:4233123358": {
+      "deadline": "2026-04-16T00:00:00+00:00",
+      "digest_sent_at": null,
+      "fingerprint": "17588acf8e70edc7a066b3ae9da13eb3c02a95698a26248baa2e3e0a14a115b0",
+      "immediate_sent_at": "2026-08-02T01:01:48.096470+00:00",
+      "reward_usd": "20.00"
+    },
+    "github:4309731659": {
+      "deadline": null,
+      "digest_sent_at": null,
+      "fingerprint": "f53eff202fe923fd5f628795da3c362a0851e14381c9470d5d0af94b1b951efc",
+      "immediate_sent_at": "2026-08-02T01:01:48.096470+00:00",
+      "reward_usd": "200"
+    },
+    "github:4614014108": {
+      "deadline": null,
+      "digest_sent_at": null,
+      "fingerprint": "be355ce7e65b567ab7dd26ac1de6e8ca7d4675da5bb25f78ce3888678c82037c",
+      "immediate_sent_at": null,
+      "reward_usd": "2.000"
+    },
+    "github:4697954151": {
+      "deadline": null,
+      "digest_sent_at": null,
+      "fingerprint": "44c2067d47a324c37f42b87fd6a52ff4297d46c1b6c002eee5128817ab44c805",
+      "immediate_sent_at": "2026-08-02T01:01:48.096470+00:00",
+      "reward_usd": "25"
+    },
+    "github:4804271831": {
+      "deadline": null,
+      "digest_sent_at": null,
+      "fingerprint": "b4da19dd57d8f8be25d65d9c0e08c1cb0424a817c0ab0d34e9311650eca6a099",
+      "immediate_sent_at": null,
+      "reward_usd": "10"
+    },
+    "github:4972111892": {
+      "deadline": null,
+      "digest_sent_at": null,
+      "fingerprint": "3086f79a3581a449abfb72f63c68df8d0e8d0a49c8bff62e6caecc51d720b6e6",
+      "immediate_sent_at": null,
+      "reward_usd": "2.01"
+    },
+    "github:4984151412": {
+      "deadline": null,
+      "digest_sent_at": null,
+      "fingerprint": "9b38eef422a2bdf94f321527ccef12671d87314c295f080ebbdf45a14797f177",
+      "immediate_sent_at": null,
+      "reward_usd": "10"
+    },
+    "github:4984159203": {
+      "deadline": null,
+      "digest_sent_at": null,
+      "fingerprint": "15fff727481c59c2edd57454f01d2b5d3d19478f3880d444d4fb07c4326aaedf",
+      "immediate_sent_at": null,
+      "reward_usd": "10"
+    },
+    "github:4997223260": {
+      "deadline": null,
+      "digest_sent_at": null,
+      "fingerprint": "60eadae929fdb557ee13a4aae49e7d18432c2f60a73d99e99a38ba3add4c6e89",
+      "immediate_sent_at": null,
+      "reward_usd": "2.01"
+    },
+    "github:4997223406": {
+      "deadline": null,
+      "digest_sent_at": null,
+      "fingerprint": "f3bef9278556eb070e345160b7cba9f971f9d210e403ec9efbf2051ec12c51d3",
+      "immediate_sent_at": null,
+      "reward_usd": "2.01"
+    },
+    "github:4997223651": {
+      "deadline": null,
+      "digest_sent_at": null,
+      "fingerprint": "9697b4733f555a7b6f00df692cbe33475b6e458b74bbeaac0908a50c98b6535e",
+      "immediate_sent_at": null,
+      "reward_usd": "2.01"
+    },
+    "github:5016411082": {
+      "deadline": "2026-07-30T00:00:00+00:00",
+      "digest_sent_at": null,
+      "fingerprint": "db81d559937b3f795a0bbed728334ca7db6434a27290e320739b0fcd3e48e8f4",
+      "immediate_sent_at": "2026-08-02T01:01:48.096470+00:00",
+      "reward_usd": "62000000"
+    },
+    "github:5033656419": {
+      "deadline": "2026-07-31T00:00:00+00:00",
+      "digest_sent_at": null,
+      "fingerprint": "20e861f4e2cb9d8e0b69027acc43d09c3b4424202d938739ccea6bcbd7ac8bc4",
+      "immediate_sent_at": "2026-08-02T01:01:48.096470+00:00",
+      "reward_usd": "1000"
+    },
+    "github:5035377641": {
+      "deadline": "2026-08-02T00:00:00+00:00",
+      "digest_sent_at": null,
+      "fingerprint": "967d1faa33c2df086b9a2f78a73fec69eb5f912dcaa4692602aa46ec5d7b2b52",
+      "immediate_sent_at": null,
+      "reward_usd": "0.99"
+    },
+    "github:5035488549": {
+      "deadline": "2026-08-01T00:00:00+00:00",
+      "digest_sent_at": null,
+      "fingerprint": "87a32727a594e9ac85e8de635c0e8712a0b8617117eaf7243a583d282859e765",
+      "immediate_sent_at": null,
+      "reward_usd": "0.25"
+    },
+    "github:5036081336": {
+      "deadline": "2025-11-25T00:00:00+00:00",
+      "digest_sent_at": null,
+      "fingerprint": "72b1051f81d79bff79ff8c424231b28b98d529bb7714e914e08313562549ffd1",
+      "immediate_sent_at": null,
+      "reward_usd": "0.99"
+    },
+    "github:5036834123": {
+      "deadline": "2026-08-01T00:00:00+00:00",
+      "digest_sent_at": null,
+      "fingerprint": "d7cca9eaa0a8a3f96a1807ad79ed432a4496e66ed9b0caffa86fcf603cb55ee1",
+      "immediate_sent_at": "2026-08-02T01:01:48.096470+00:00",
+      "reward_usd": "43.15"
+    },
+    "github:5038560795": {
+      "deadline": null,
+      "digest_sent_at": null,
+      "fingerprint": "f1a825dce1806cb10cf9eca4e4e2723a2587ce2f8f3fbeef3da226ccd3ba4b44",
+      "immediate_sent_at": "2026-08-02T01:01:48.096470+00:00",
+      "reward_usd": "305"
+    },
+    "github:5038902112": {
+      "deadline": "2026-08-02T05:32:17+00:00",
+      "digest_sent_at": null,
+      "fingerprint": "a91c20aecf34c61e6fa278211897ddbd9a294083ed43f6169c3fb525b0b69df7",
+      "immediate_sent_at": "2026-08-02T01:01:48.096470+00:00",
+      "reward_usd": null
+    },
+    "github:5039065158": {
+      "deadline": "2026-08-01T00:00:00+00:00",
+      "digest_sent_at": null,
+      "fingerprint": "e2fa7388bb1c2cc5936105274a79cc92a80cbc2f5a98cb78c3280eb0c4b7c7cc",
+      "immediate_sent_at": null,
+      "reward_usd": "0.50680000"
+    },
+    "github:5039147192": {
+      "deadline": "2026-08-02T06:36:49+00:00",
+      "digest_sent_at": null,
+      "fingerprint": "fbe5fd837972e85dafe5060000adfd378b625eba2fab6c164b3836cf68da86f6",
+      "immediate_sent_at": "2026-08-02T01:01:48.096470+00:00",
+      "reward_usd": null
+    },
+    "github:5039368419": {
+      "deadline": "2026-08-02T07:38:33+00:00",
+      "digest_sent_at": null,
+      "fingerprint": "067b942382b0c463cc1fdda7059579f9a0d0ca2013e306ba9065fbb110d2bb3e",
+      "immediate_sent_at": "2026-08-02T01:01:48.096470+00:00",
+      "reward_usd": null
+    },
+    "github:5039495807": {
+      "deadline": null,
+      "digest_sent_at": null,
+      "fingerprint": "ac38eac238b694ad03a4315d22c1421a2a527327277af36191bfa488c1da1e48",
+      "immediate_sent_at": "2026-08-02T01:01:48.096470+00:00",
+      "reward_usd": "98.9"
+    },
+    "github:5039582164": {
+      "deadline": "2026-08-02T08:41:40+00:00",
+      "digest_sent_at": null,
+      "fingerprint": "00f5ea2c52e8f0bbaf7075f3889d943afa0d65017e075af9e880bb18c08c5d61",
+      "immediate_sent_at": "2026-08-02T01:01:48.096470+00:00",
+      "reward_usd": null
+    },
+    "github:5039635112": {
+      "deadline": "2026-08-02T00:00:00+00:00",
+      "digest_sent_at": null,
+      "fingerprint": "ad41d04ad2f64fea4b0b08645bea8e6adea35e06a1858d9c60db0d310a84125e",
+      "immediate_sent_at": "2026-08-02T01:01:48.096470+00:00",
+      "reward_usd": "10000000"
+    },
+    "github:5039703217": {
+      "deadline": null,
+      "digest_sent_at": null,
+      "fingerprint": "16e3379ce725b190bd5c74c675b909fc449d9bfaad03040dc3bd7c3ba93b51ce",
+      "immediate_sent_at": null,
+      "reward_usd": "0.99"
+    }
+  },
+  "last_success": {
+    "github": "2026-08-02T01:01:48.096470+00:00"
+  },
+  "pending_digest": {
+    "github:3883921310": {
+      "categories": [
+        "bounty",
+        "open",
+        "standard"
+      ],
+      "confidence": 0.7,
+      "deadline": null,
+      "discovered_at": "2026-02-02T04:32:35+00:00",
+      "expected_cost_usd": "0",
+      "kind": "bounty",
+      "requires_deposit": false,
+      "restrictions": [],
+      "reward": {
+        "amount": "5",
+        "currency": "USD",
+        "kind": "fixed",
+        "text": "$5",
+        "usd_value": "5"
+      },
+      "risk_flags": [],
+      "skills": [
+        "python"
+      ],
+      "source": "github",
+      "source_id": "3883921310",
+      "summary": "> **RustChain** is a Proof-of-Antiquity blockchain that rewards real vintage hardware (PowerPC G4/G5, 68K Macs, SPARC, etc.) with higher mining multipliers than modern machines. The network uses 6 hardware fingerprint checks to prevent VMs and emulators from earning rewards. There are currently 9 active miners and 3 attestation nodes. The native token is **RTC (RustChain Token)**. > > **Live Network:** Node health `curl -sk https://50.28.86.131/health` · Active miners `curl -sk https://50.28.86…",
+      "title": "[BOUNTY] Port RustChain miner to ARM64 (Raspberry Pi / ARM servers)",
+      "updated_at": "2026-08-02T00:39:25+00:00",
+      "url": "https://github.com/Scottcjn/rustchain-bounties/issues/7"
+    },
+    "github:3904303864": {
+      "categories": [
+        "bug",
+        "bounty",
+        "open"
+      ],
+      "confidence": 0.7,
+      "deadline": null,
+      "discovered_at": "2026-02-06T01:13:53+00:00",
+      "expected_cost_usd": "0",
+      "kind": "bounty",
+      "requires_deposit": false,
+      "restrictions": [],
+      "reward": {
+        "amount": "0.10",
+        "currency": "USD",
+        "kind": "fixed",
+        "text": "$0.10 USD",
+        "usd_value": "0.10"
+      },
+      "risk_flags": [],
+      "skills": [
+        "python"
+      ],
+      "source": "github",
+      "source_id": "3904303864",
+      "summary": "## Ongoing Bug Bounty Program **Pool: 750 RTC (ongoing, replenished as needed)** ### Severity & Rewards | Severity | Description | Reward | |----------|-------------|--------| | **Critical** | Fund theft, consensus bypass, RCE | 100-200 RTC | | **High** | Data leak, auth bypass, significant logic error | 50-100 RTC | | **Medium** | DoS, info disclosure, moderate bugs | 15-50 RTC | | **Low** | UI bugs, minor leaks, doc errors | 5-15 RTC | ### In-Scope - RustChain node software, attestation & fin…",
+      "title": "[BOUNTY] Ongoing Bug Bounty Program — Find Bugs, Earn RTC (133 RTC Pool)",
+      "updated_at": "2026-08-02T00:20:51+00:00",
+      "url": "https://github.com/Scottcjn/rustchain-bounties/issues/71"
+    },
+    "github:4227389983": {
+      "categories": [],
+      "confidence": 0.7,
+      "deadline": "2026-04-08T00:00:00+00:00",
+      "discovered_at": "2026-04-08T20:21:09+00:00",
+      "expected_cost_usd": "0",
+      "kind": "bounty",
+      "requires_deposit": false,
+      "restrictions": [],
+      "reward": {
+        "amount": "15",
+        "currency": "USD",
+        "kind": "fixed",
+        "text": "15 USD",
+        "usd_value": "15"
+      },
+      "risk_flags": [],
+      "skills": [],
+      "source": "github",
+      "source_id": "4227389983",
+      "summary": "--- title: \"R-#128: R-#128 Premium Course Payments with Dynamic Pricing (Mixed USDT/SLEARN)\" labels: enhancement --- Enable users to purchase premium courses using the already-deployed `SLEARN.receive()` function (from I129). Add dynamic pricing based on user's country (HDI). No contract changes needed — all logic is already in SLEARN.sol from I129. **Depends on:** I129 (SLEARN token launch, contracts deployed and operational) --- ## Summary of Key Decisions | Decision | Details | | :--- | :---…",
+      "title": "R-#128 Premium Course Payments with Dynamic Pricing (Mixed USDT/SLEARN)",
+      "updated_at": "2026-07-28T14:25:53+00:00",
+      "url": "https://github.com/pasosdeJesus/learn.tg/issues/128"
+    },
+    "github:4614014108": {
+      "categories": [],
+      "confidence": 0.7,
+      "deadline": null,
+      "discovered_at": "2026-06-08T15:02:46+00:00",
+      "expected_cost_usd": "0",
+      "kind": "bounty",
+      "requires_deposit": false,
+      "restrictions": [],
+      "reward": {
+        "amount": "2.000",
+        "currency": "USDC",
+        "kind": "fixed",
+        "text": "$2,000 USDC",
+        "usd_value": "2.000"
+      },
+      "risk_flags": [],
+      "skills": [],
+      "source": "github",
+      "source_id": "4614014108",
+      "summary": "**Board item:** ERC-7710 Community Caveat Enforcers Registry on Intuition **Status:** Open | **Priority:** P0 **Reward:** $2,000 USDC + iBox token **Target:** Full-stack builder with web3 frontend experience **Validation:** Hard requirement — Intuition Team must validate before payout **Chain:** Intuition Network (mainnet: 1155) --- ## Context [ERC-7710](https://eips.ethereum.org/EIPS/eip-7710) introduces caveat enforcers — smart contracts that restrict what a delegated permission can actually…",
+      "title": "Mission 13: ERC-7710 Community Caveat Enforcers Registry",
+      "updated_at": "2026-07-28T21:31:30+00:00",
+      "url": "https://github.com/intuition-box/Caveats-Enforcers/issues/1"
+    },
+    "github:4804271831": {
+      "categories": [
+        "good first issue",
+        "agent-task",
+        "bounty",
+        "frontend"
+      ],
+      "confidence": 0.7,
+      "deadline": null,
+      "discovered_at": "2026-07-03T14:32:41+00:00",
+      "expected_cost_usd": "0",
+      "kind": "bounty",
+      "requires_deposit": false,
+      "restrictions": [],
+      "reward": {
+        "amount": "10",
+        "currency": "USDC",
+        "kind": "fixed",
+        "text": "$10 USDC",
+        "usd_value": "10"
+      },
+      "risk_flags": [],
+      "skills": [],
+      "source": "github",
+      "source_id": "4804271831",
+      "summary": "## 🎯 Objective Create a mobile-optimized landing page that detects mobile context and shows a simplified CTA with wallet app deep-links. ## 📋 Scope The current landing page is desktop-first. On mobile: 1. Detect user agent / screen size 2. Show simplified hero: 1 headline + 1 CTA button 3. CTA deep-links to MetaMask Mobile, Coinbase Wallet, Rainbow 4. Track mobile vs desktop conversion separately ## ✅ Acceptance Criteria - [ ] HTML/CSS/JS mobile landing page (or React component) - [ ] User agen…",
+      "title": "[AGENT-TASK] Mobile-first landing page with wallet deep-link — +15% conversion",
+      "updated_at": "2026-07-29T19:20:08+00:00",
+      "url": "https://github.com/Nexussyn/ai-growth-engine/issues/4"
+    },
+    "github:4972111892": {
+      "categories": [
+        "bounty",
+        "ai-agent-welcome",
+        "payments",
+        "good-first-agent-bounty",
+        "funded-live",
+        "claimable-live"
+      ],
+      "confidence": 0.7,
+      "deadline": null,
+      "discovered_at": "2026-07-24T21:15:35+00:00",
+      "expected_cost_usd": "0",
+      "kind": "bounty",
+      "requires_deposit": false,
+      "restrictions": [],
+      "reward": {
+        "amount": "2.01",
+        "currency": "USDC",
+        "kind": "fixed",
+        "text": "2.01 USDC",
+        "usd_value": "2.01"
+      },
+      "risk_flags": [],
+      "skills": [],
+      "source": "github",
+      "source_id": "4972111892",
+      "summary": "## Goal Create and fully fund a concrete **1 USDC agent discovery child bounty** that a different registered participant completes and receives canonical settlement for. Completing the parent pays **2 USDC**, producing **1 USDC gross profit** when the child is self-funded at exactly 1 USDC. ## Live payment evidence **Funded and claimable on Base mainnet.** - Routed V3 parent: `0x8a4acb37acef4c24c821835dad36345b6afa7d4d` - Creation and funding transaction: https://basescan.org/tx/0x17366520b7b1a…",
+      "title": "[META] Earn 1 USDC margin with an agent-discovery bounty",
+      "updated_at": "2026-08-02T00:45:21+00:00",
+      "url": "https://github.com/NSPG13/agent-bounties/issues/590"
+    },
+    "github:4984151412": {
+      "categories": [
+        "plugin"
+      ],
+      "confidence": 0.7,
+      "deadline": null,
+      "discovered_at": "2026-07-27T03:56:16+00:00",
+      "expected_cost_usd": "0",
+      "kind": "bounty",
+      "requires_deposit": false,
+      "restrictions": [],
+      "reward": {
+        "amount": "10",
+        "currency": "USDC",
+        "kind": "fixed",
+        "text": "$10 USDC",
+        "usd_value": "10"
+      },
+      "risk_flags": [],
+      "skills": [],
+      "source": "github",
+      "source_id": "4984151412",
+      "summary": "🚀 **INVITATION: $10 USDC Builder Bounty & Zero-Gas M2M Payments for ElizaOS (Autonomous AI Agent Framework)** Hi @elizaOS team and builders! 👋 We love the work you're doing with **elizaOS/eliza**. Notice that your community is tackling challenges around *agents need automated cross-chain gasless micropayments for plugins and data feeds.* We just launched **AI Micropayment Network (AiMPN v2.0)** on **Base Mainnet (L2)**, featuring an ERC-4337 Account Abstraction Paymaster that sponsors **100% of…",
+      "title": "🎁 [Bounty Invitation] $10 USDC Instant Reward & Zero-Gas M2M Payments for ElizaOS (Autonomous AI Agent Framework)",
+      "updated_at": "2026-07-29T12:08:49+00:00",
+      "url": "https://github.com/elizaOS/eliza/issues/17201"
+    },
+    "github:4984159203": {
+      "categories": [],
+      "confidence": 0.7,
+      "deadline": null,
+      "discovered_at": "2026-07-27T03:58:09+00:00",
+      "expected_cost_usd": "0",
+      "kind": "bounty",
+      "requires_deposit": false,
+      "restrictions": [],
+      "reward": {
+        "amount": "10",
+        "currency": "USDC",
+        "kind": "fixed",
+        "text": "$10 USDC",
+        "usd_value": "10"
+      },
+      "risk_flags": [],
+      "skills": [],
+      "source": "github",
+      "source_id": "4984159203",
+      "summary": "🚀 **INVITATION: $10 USDC Builder Bounty & Zero-Gas M2M Payments for AutoGen (Multi-Agent Conversation Framework)** Hi @microsoft team and builders! 👋 We love the work you're doing with **microsoft/autogen**. Notice that your community is tackling challenges around *no native economic layer for multi-agent negotiation and resource bidding.* We just launched **AI Micropayment Network (AiMPN v2.0)** on **Base Mainnet (L2)**, featuring an ERC-4337 Account Abstraction Paymaster that sponsors **100%…",
+      "title": "🎁 [Bounty Invitation] $10 USDC Instant Reward & Zero-Gas M2M Payments for AutoGen (Multi-Agent Conversation Framework)",
+      "updated_at": "2026-07-29T07:24:19+00:00",
+      "url": "https://github.com/microsoft/autogen/issues/8000"
+    },
+    "github:4997223260": {
+      "categories": [
+        "bounty",
+        "ai-agent-welcome",
+        "payments",
+        "good-first-agent-bounty",
+        "funded-live",
+        "claimable-live"
+      ],
+      "confidence": 0.7,
+      "deadline": null,
+      "discovered_at": "2026-07-28T09:51:05+00:00",
+      "expected_cost_usd": "0",
+      "kind": "bounty",
+      "requires_deposit": false,
+      "restrictions": [],
+      "reward": {
+        "amount": "2.01",
+        "currency": "USDC",
+        "kind": "fixed",
+        "text": "2.01 USDC",
+        "usd_value": "2.01"
+      },
+      "risk_flags": [],
+      "skills": [],
+      "source": "github",
+      "source_id": "4997223260",
+      "summary": "## Goal Create and fully fund a concrete **1 USDC API reliability child bounty** that a different registered participant completes and receives canonical settlement for. Completing the parent pays **2 USDC**, producing **1 USDC gross profit** when the child is self-funded at exactly 1 USDC. ## Live payment evidence **Funded and claimable on Base mainnet.** - Routed V3 parent: `0x71b7b3a8ceb534ca904b8513987aa1f3bd6c3d91` - Creation and funding transaction: previously confirmed canonical creation…",
+      "title": "[META] Earn 1 USDC margin with a API reliability bounty",
+      "updated_at": "2026-08-02T00:25:58+00:00",
+      "url": "https://github.com/NSPG13/agent-bounties/issues/647"
+    },
+    "github:4997223406": {
+      "categories": [
+        "bounty",
+        "ai-agent-welcome",
+        "payments",
+        "good-first-agent-bounty",
+        "funded-live",
+        "claimable-live"
+      ],
+      "confidence": 0.7,
+      "deadline": null,
+      "discovered_at": "2026-07-28T09:51:06+00:00",
+      "expected_cost_usd": "0",
+      "kind": "bounty",
+      "requires_deposit": false,
+      "restrictions": [],
+      "reward": {
+        "amount": "2.01",
+        "currency": "USDC",
+        "kind": "fixed",
+        "text": "2.01 USDC",
+        "usd_value": "2.01"
+      },
+      "risk_flags": [],
+      "skills": [],
+      "source": "github",
+      "source_id": "4997223406",
+      "summary": "## Goal Create and fully fund a concrete **1 USDC MCP interoperability child bounty** that a different registered participant completes and receives canonical settlement for. Completing the parent pays **2 USDC**, producing **1 USDC gross profit** when the child is self-funded at exactly 1 USDC. ## Live payment evidence **Funded and claimable on Base mainnet.** - Routed V3 parent: `0x15fe9336ddd83f87335d27f39f83750e6f86fcef` - Creation and funding transaction: previously confirmed canonical cre…",
+      "title": "[META] Earn 1 USDC margin with a MCP interoperability bounty",
+      "updated_at": "2026-08-02T00:24:21+00:00",
+      "url": "https://github.com/NSPG13/agent-bounties/issues/648"
+    },
+    "github:4997223651": {
+      "categories": [
+        "bounty",
+        "ai-agent-welcome",
+        "payments",
+        "good-first-agent-bounty",
+        "funded-live",
+        "claimable-live"
+      ],
+      "confidence": 0.7,
+      "deadline": null,
+      "discovered_at": "2026-07-28T09:51:08+00:00",
+      "expected_cost_usd": "0",
+      "kind": "bounty",
+      "requires_deposit": false,
+      "restrictions": [],
+      "reward": {
+        "amount": "2.01",
+        "currency": "USDC",
+        "kind": "fixed",
+        "text": "2.01 USDC",
+        "usd_value": "2.01"
+      },
+      "risk_flags": [],
+      "skills": [],
+      "source": "github",
+      "source_id": "4997223651",
+      "summary": "## Goal Create and fully fund a concrete **1 USDC agent wallet UX child bounty** that a different registered participant completes and receives canonical settlement for. Completing the parent pays **2 USDC**, producing **1 USDC gross profit** when the child is self-funded at exactly 1 USDC. ## Live payment evidence **Funded and claimable on Base mainnet.** - Routed V3 parent: `0x41f7f2722f0af7289c2f2eea6afed6f4873f722a` - Creation and funding transaction: previously confirmed canonical creation…",
+      "title": "[META] Earn 1 USDC margin with a agent wallet UX bounty",
+      "updated_at": "2026-08-02T00:39:07+00:00",
+      "url": "https://github.com/NSPG13/agent-bounties/issues/649"
+    },
+    "github:5035377641": {
+      "categories": [
+        "help wanted",
+        "prospective-paid-task"
+      ],
+      "confidence": 0.7,
+      "deadline": "2026-08-02T00:00:00+00:00",
+      "discovered_at": "2026-08-01T04:59:25+00:00",
+      "expected_cost_usd": "0",
+      "kind": "bounty",
+      "requires_deposit": false,
+      "restrictions": [],
+      "reward": {
+        "amount": "0.99",
+        "currency": "USDC",
+        "kind": "fixed",
+        "text": "0.99 USDC",
+        "usd_value": "0.99"
+      },
+      "risk_flags": [],
+      "skills": [],
+      "source": "github",
+      "source_id": "5035377641",
+      "summary": "## Goal Fix `solution/retry_after.sh` so it safely parses an HTTP `Retry-After` delta-seconds value. The immutable `benchmark/test.sh` must pass without weakening or changing the benchmark. ## Deterministic acceptance criteria 1. Accept only non-empty ASCII decimal digits for the Retry-After value. 2. Reject signs, suffixes, whitespace, and other malformed values. 3. Require a non-negative decimal maximum and cap valid delays to it. 4. Print only the normalized decimal delay. 5. Change only `so…",
+      "title": "Harden Retry-After delta-seconds parsing — prospective 0.99 USDC child",
+      "updated_at": "2026-08-02T00:35:55+00:00",
+      "url": "https://github.com/dtopenclaw/api-reliability-bounty/issues/1"
+    },
+    "github:5035488549": {
+      "categories": [],
+      "confidence": 0.7,
+      "deadline": "2026-08-01T00:00:00+00:00",
+      "discovered_at": "2026-08-01T05:34:44+00:00",
+      "expected_cost_usd": "0",
+      "kind": "bounty",
+      "requires_deposit": false,
+      "restrictions": [],
+      "reward": {
+        "amount": "0.25",
+        "currency": "USDT",
+        "kind": "fixed",
+        "text": "0.25 USDT",
+        "usd_value": "0.25"
+      },
+      "risk_flags": [],
+      "skills": [],
+      "source": "github",
+      "source_id": "5035488549",
+      "summary": "## Report Physical Samsung screenshot on 2026-08-01 shows a large solid gray region below the leverage control on the Setups page. It appears after navigating from other workspaces and can be scrolled for an excessive distance. The solid gray region matches Flutter's release-mode ErrorWidget behavior, so this must be treated as a runtime build/render failure rather than a cosmetic placeholder. The same physical canary was armed overnight with only 0.25 USDT available and opened no position. Cur…",
+      "title": "P0: Setups page renders endless gray ErrorWidget and live canary hides minimum-capital rejection",
+      "updated_at": "2026-08-01T18:59:05+00:00",
+      "url": "https://github.com/Hamrez95/Quantara/issues/87"
+    },
+    "github:5036081336": {
+      "categories": [
+        "help wanted",
+        "good first issue"
+      ],
+      "confidence": 0.7,
+      "deadline": "2025-11-25T00:00:00+00:00",
+      "discovered_at": "2026-08-01T08:08:27+00:00",
+      "expected_cost_usd": "0",
+      "kind": "bounty",
+      "requires_deposit": false,
+      "restrictions": [],
+      "reward": {
+        "amount": "0.99",
+        "currency": "USDC",
+        "kind": "fixed",
+        "text": "0.99 USDC",
+        "usd_value": "0.99"
+      },
+      "risk_flags": [],
+      "skills": [],
+      "source": "github",
+      "source_id": "5036081336",
+      "summary": "# Require exact MCP protocol-version membership during initialization fallback ## Funding status This child task is being prepared for [Agent Bounties #648](https://github.com/NSPG13/agent-bounties/issues/648). It is not yet created or funded on Base. Do not start paid work until this issue is updated with the canonical child contract, full funding transaction, and the intended solver's confirmed `BountyClaimed` event. Once created as planned, the child target will be exactly 1.00 Base native U…",
+      "title": "[Upcoming 0.99 USDC bounty · Shell] Fix one MCP version-negotiation edge case",
+      "updated_at": "2026-08-02T00:35:54+00:00",
+      "url": "https://github.com/aiforuseac4-blockchain/mcp-version-negotiation-bounty/issues/1"
+    },
+    "github:5039065158": {
+      "categories": [
+        "enhancement"
+      ],
+      "confidence": 0.7,
+      "deadline": "2026-08-01T00:00:00+00:00",
+      "discovered_at": "2026-08-01T21:14:24+00:00",
+      "expected_cost_usd": "0",
+      "kind": "bounty",
+      "requires_deposit": false,
+      "restrictions": [],
+      "reward": {
+        "amount": "0.50680000",
+        "currency": "USDT",
+        "kind": "fixed",
+        "text": "0.50680000 USDT",
+        "usd_value": "0.50680000"
+      },
+      "risk_flags": [],
+      "skills": [],
+      "source": "github",
+      "source_id": "5039065158",
+      "summary": "## Contexto Desde 2026-08-01 ~14:04 UTC o daemon em prod alarma A CADA MINUTO por causa de 1 item antigo não conciliado no income ledger. O item é de 2026-07-17 e não tem relação com a operação atual. ## Evidência Item (via `income_ledger`, `matched_at IS NULL`): ``` exchange_income_id | 900307906811427 symbol | BTCUSDT income_type | REALIZED_PNL amount | -0.50680000 USDT exchange_trade_id | 7906811427 income_time | 2026-07-17 07:29:28+02 ``` Logs, repetindo a cada minuto: ``` WARN robsond::dae…",
+      "title": "income ledger: alarme por minuto sem dedup + falta ferramenta de ack para item unmatched órfão (ADR-0045)",
+      "updated_at": "2026-08-01T21:14:24+00:00",
+      "url": "https://github.com/ldamasio/robson/issues/140"
+    },
+    "github:5039703217": {
+      "categories": [],
+      "confidence": 0.7,
+      "deadline": null,
+      "discovered_at": "2026-08-02T00:21:23+00:00",
+      "expected_cost_usd": "0",
+      "kind": "bounty",
+      "requires_deposit": false,
+      "restrictions": [],
+      "reward": {
+        "amount": "0.99",
+        "currency": "USDC",
+        "kind": "fixed",
+        "text": "0.99 USDC",
+        "usd_value": "0.99"
+      },
+      "risk_flags": [],
+      "skills": [],
+      "source": "github",
+      "source_id": "5039703217",
+      "summary": "This is the proposed independent child task for [Agent Bounties parent #649](https://github.com/NSPG13/agent-bounties/issues/649). ## Current status The child is **not yet created or funded on-chain**. This issue and repository are coordination artifacts, not payment evidence. Do not start paid work yet. Planned economics: - child target: 1.000000 native USDC on Base; - solver reward: 0.990000 USDC; - refundable solver claim bond: 0.010000 USDC; - verifier reward: 0.010000 USDC. ## Independent-…",
+      "title": "Paid child solver: enforce an explicit wallet approval cap (0.99 USDC)",
+      "updated_at": "2026-08-02T00:42:58+00:00",
+      "url": "https://github.com/guigaoliveira/agent-wallet-approval-bounty/issues/1"
+    }
+  },
+  "version": 1
 }
