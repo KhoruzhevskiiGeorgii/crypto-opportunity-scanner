@@ -8,7 +8,7 @@ on:
         required: true
         default: scan
         type: choice
-        options: [scan, digest]
+        options: [scan, digest, recover-alert-log]
   schedule:
     - cron: "17 1,7,13,19 * * *"
     - cron: "23 17,18 * * *"
@@ -72,18 +72,19 @@ jobs:
           DIGEST_HOUR: "19"
           TIMEZONE: Europe/Belgrade
           STATE_PATH: data/state.json
+          ALERT_LOG_PATH: data/alerts.jsonl
         run: opportunity-scanner "${{ steps.mode.outputs.mode }}"
 
-      - name: Commit state changes
+      - name: Commit persistent data changes
         if: steps.mode.outputs.should_run == 'true'
         run: |
-          if git diff --quiet -- data/state.json; then
-            echo "No state changes"
+          if [ -z "$(git status --porcelain -- data/state.json data/alerts.jsonl)" ]; then
+            echo "No persistent data changes"
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/state.json
-          git commit -m "chore: update scanner state"
+          git add data/state.json data/alerts.jsonl
+          git commit -m "chore: update scanner data"
           git pull --rebase origin "${GITHUB_REF_NAME}"
           git push origin "HEAD:${GITHUB_REF_NAME}"
