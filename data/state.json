@@ -14,12 +14,33 @@
       "immediate_sent_at": null,
       "reward_usd": "5"
     },
+    "github:3904274138": {
+      "deadline": null,
+      "digest_sent_at": null,
+      "fingerprint": "053888e774a204d3865354b2e9de9cafdf7836b2e56dae0df224d96e5e9c0e30",
+      "immediate_sent_at": null,
+      "reward_usd": "7.50"
+    },
     "github:3904303864": {
       "deadline": null,
       "digest_sent_at": null,
       "fingerprint": "4856c7276ab888152ba41e7592ce85c2a979b91139ae56d9d7928b6b36da05cc",
       "immediate_sent_at": null,
       "reward_usd": "0.10"
+    },
+    "github:3998046489": {
+      "deadline": null,
+      "digest_sent_at": null,
+      "fingerprint": "ba55ac7b5ea680d34fce2d01fad084396af170f94c4c57a9068d7a9d069203c5",
+      "immediate_sent_at": null,
+      "reward_usd": "2.50"
+    },
+    "github:4006214897": {
+      "deadline": null,
+      "digest_sent_at": null,
+      "fingerprint": "f3966468d500641ffd03aeb741bdca81f417870f4f85f2eb63007ee6557eb9cf",
+      "immediate_sent_at": null,
+      "reward_usd": "0.20"
     },
     "github:4022852570": {
       "deadline": null,
@@ -63,12 +84,26 @@
       "immediate_sent_at": "2026-08-02T01:01:48.096470+00:00",
       "reward_usd": "200"
     },
+    "github:4439270667": {
+      "deadline": "2026-05-13T00:00:00+00:00",
+      "digest_sent_at": null,
+      "fingerprint": "fc6bcb1f6d7495cfb454a71b2747f06b428b50af9b3606c426990cc8f1ac51f7",
+      "immediate_sent_at": null,
+      "reward_usd": "3"
+    },
     "github:4482338499": {
       "deadline": null,
       "digest_sent_at": null,
       "fingerprint": "bf3ea2abbeede20ce59cfb84c0baedbd582b6b034f2e436a963236f8ee37e747",
       "immediate_sent_at": "2026-08-02T04:37:20.486920+00:00",
       "reward_usd": "1000"
+    },
+    "github:4514807960": {
+      "deadline": null,
+      "digest_sent_at": null,
+      "fingerprint": "1790411f381c3467abdf9c07e1252947444586dc12cdf04757264699f6f34839",
+      "immediate_sent_at": null,
+      "reward_usd": "1"
     },
     "github:4526679137": {
       "deadline": "2026-08-02T03:56:43+00:00",
@@ -174,6 +209,13 @@
       "fingerprint": "db81d559937b3f795a0bbed728334ca7db6434a27290e320739b0fcd3e48e8f4",
       "immediate_sent_at": "2026-08-02T01:01:48.096470+00:00",
       "reward_usd": "62000000"
+    },
+    "github:5028632798": {
+      "deadline": null,
+      "digest_sent_at": null,
+      "fingerprint": "7710a94694cb96323786d46294f2c05556f98952e589771236584fdfc0d6db89",
+      "immediate_sent_at": null,
+      "reward_usd": "2"
     },
     "github:5033031154": {
       "deadline": null,
@@ -356,10 +398,45 @@
       "fingerprint": "ef3c51afc6bf61a03a31386744230d27cc9cc6e8661d8b0c0ac722467df2cafa",
       "immediate_sent_at": "2026-08-02T04:37:20.486920+00:00",
       "reward_usd": "520"
+    },
+    "github:5040776738": {
+      "deadline": "2026-08-02T13:59:36+00:00",
+      "digest_sent_at": null,
+      "fingerprint": "a969d80db8a1850c103832f42a1f431c67c22857cdfbf2736ba89a885edeb8e7",
+      "immediate_sent_at": "2026-08-02T09:20:40.160082+00:00",
+      "reward_usd": null
+    },
+    "github:5040808290": {
+      "deadline": null,
+      "digest_sent_at": null,
+      "fingerprint": "a199df14be92a3f198f309fce571c026a836920c3e57ef28974f7a2d7acf6f43",
+      "immediate_sent_at": "2026-08-02T09:20:40.160082+00:00",
+      "reward_usd": "25"
+    },
+    "github:5040846750": {
+      "deadline": "2026-08-02T00:00:00+00:00",
+      "digest_sent_at": null,
+      "fingerprint": "ff11e658f99b810751ffe6fc3b3b284f967a29c8a31f40374106a481da4b1903",
+      "immediate_sent_at": "2026-08-02T09:20:40.160082+00:00",
+      "reward_usd": "75.477"
+    },
+    "github:5041389713": {
+      "deadline": "2026-08-02T16:52:56+00:00",
+      "digest_sent_at": null,
+      "fingerprint": "fdeb8320344af695b05287cb0f05ddd678013080713fba7d04fa7a6d2a204145",
+      "immediate_sent_at": "2026-08-02T09:20:40.160082+00:00",
+      "reward_usd": null
+    },
+    "github:5041655577": {
+      "deadline": "2026-08-02T00:00:00+00:00",
+      "digest_sent_at": null,
+      "fingerprint": "1f3e1294a1c2186559d1785f8753304a30d20aee7c70b79c9ca91239613d5dcd",
+      "immediate_sent_at": null,
+      "reward_usd": "1.5"
     }
   },
   "last_success": {
-    "github": "2026-08-02T04:37:20.486920+00:00"
+    "github": "2026-08-02T09:20:40.160082+00:00"
   },
   "pending_digest": {
     "github:3883921310": {
@@ -393,6 +470,36 @@
       "updated_at": "2026-08-02T00:39:25+00:00",
       "url": "https://github.com/Scottcjn/rustchain-bounties/issues/7"
     },
+    "github:3904274138": {
+      "categories": [
+        "bounty",
+        "open",
+        "red-team",
+        "hardening"
+      ],
+      "confidence": 0.7,
+      "deadline": null,
+      "discovered_at": "2026-02-06T01:03:38+00:00",
+      "expected_cost_usd": "0",
+      "kind": "bounty",
+      "requires_deposit": false,
+      "restrictions": [],
+      "reward": {
+        "amount": "7.50",
+        "currency": "USD",
+        "kind": "fixed",
+        "text": "$7.50",
+        "usd_value": "7.50"
+      },
+      "risk_flags": [],
+      "skills": [],
+      "source": "github",
+      "source_id": "3904274138",
+      "summary": "## Red Team Bounty: Payment Widget Security **Reward: 75 RTC** (~$7.50 at reference rate) ### Target The RTC Payment Widget (embeddable checkout button) merged in Rustchain PR #13 by @erdogan98. **Code location:** Widget files in Rustchain repo (1486 lines added) ### What to Attack 1. **XSS via Widget Parameters:** Can you inject scripts through widget config (amount, recipient, memo fields)? 2. **Clickjacking:** Can the widget be embedded in a malicious iframe to trick users? 3. **CSRF:** Can…",
+      "title": "[BOUNTY] 🔴 Red Team: Payment Widget XSS & Injection (75 RTC)",
+      "updated_at": "2026-08-02T09:20:09+00:00",
+      "url": "https://github.com/Scottcjn/rustchain-bounties/issues/67"
+    },
     "github:3904303864": {
       "categories": [
         "bug",
@@ -423,6 +530,67 @@
       "title": "[BOUNTY] Ongoing Bug Bounty Program — Find Bugs, Earn RTC (133 RTC Pool)",
       "updated_at": "2026-08-02T00:20:51+00:00",
       "url": "https://github.com/Scottcjn/rustchain-bounties/issues/71"
+    },
+    "github:3998046489": {
+      "categories": [
+        "bounty",
+        "bottube",
+        "content"
+      ],
+      "confidence": 0.7,
+      "deadline": null,
+      "discovered_at": "2026-02-26T22:21:21+00:00",
+      "expected_cost_usd": "0",
+      "kind": "bounty",
+      "requires_deposit": false,
+      "restrictions": [],
+      "reward": {
+        "amount": "2.50",
+        "currency": "USD",
+        "kind": "fixed",
+        "text": "$2.50",
+        "usd_value": "2.50"
+      },
+      "risk_flags": [],
+      "skills": [
+        "python"
+      ],
+      "source": "github",
+      "source_id": "3998046489",
+      "summary": "## [BOUNTY] Upload 5 Original Videos to BoTTube — 25 RTC **Reward**: 25 RTC ($2.50 at reference rate) **Difficulty**: Easy **Status**: Open ### Description Help grow BoTTube's content library by uploading 5 original videos to the platform. ### Requirements - Upload 5 videos to [bottube.ai](https://bottube.ai) - Videos must be original content (not re-uploads from other platforms) - Each video must have a title and description - Any topic welcome — tech, creative, educational, entertainment - Vi…",
+      "title": "[BOUNTY] Upload 5 Original Videos to BoTTube — 17 RTC",
+      "updated_at": "2026-08-02T09:14:48+00:00",
+      "url": "https://github.com/Scottcjn/rustchain-bounties/issues/446"
+    },
+    "github:4006214897": {
+      "categories": [
+        "bounty",
+        "open",
+        "micro",
+        "community"
+      ],
+      "confidence": 0.7,
+      "deadline": null,
+      "discovered_at": "2026-03-01T04:13:33+00:00",
+      "expected_cost_usd": "0",
+      "kind": "bounty",
+      "requires_deposit": false,
+      "restrictions": [],
+      "reward": {
+        "amount": "0.20",
+        "currency": "USD",
+        "kind": "fixed",
+        "text": "$0.20",
+        "usd_value": "0.20"
+      },
+      "risk_flags": [],
+      "skills": [],
+      "source": "github",
+      "source_id": "4006214897",
+      "summary": "## Bounty: Test Block Explorer **Reward**: 2 RTC | **Difficulty**: Easy | **Time**: ~15 minutes | **Multi-claim**: Yes ### What to do 1. Visit https://50.28.86.131/explorer 2. Navigate at least 3 different pages 3. Screenshot each page 4. Report any bugs, broken links, or UI issues ### Acceptance criteria - [ ] 3+ pages visited and screenshotted - [ ] Bugs documented with steps to reproduce - [ ] Browser and OS noted ### How to claim Post screenshots and bug report as comment here. 2 RTC. **Rew…",
+      "title": "[Bounty] Block Explorer Bug Hunt - 1 RTC",
+      "updated_at": "2026-08-02T09:10:29+00:00",
+      "url": "https://github.com/Scottcjn/rustchain-bounties/issues/517"
     },
     "github:4084022348": {
       "categories": [
@@ -507,6 +675,61 @@
       "title": "[BOUNTY: 1 RTC] Run the RustChain Miner for 24 Hours and Share Your Hardware Report",
       "updated_at": "2026-08-02T03:37:12+00:00",
       "url": "https://github.com/Scottcjn/rustchain-bounties/issues/2870"
+    },
+    "github:4439270667": {
+      "categories": [
+        "bug"
+      ],
+      "confidence": 0.7,
+      "deadline": "2026-05-13T00:00:00+00:00",
+      "discovered_at": "2026-05-13T15:48:52+00:00",
+      "expected_cost_usd": "0",
+      "kind": "bounty",
+      "requires_deposit": false,
+      "restrictions": [],
+      "reward": {
+        "amount": "3",
+        "currency": "USDC",
+        "kind": "fixed",
+        "text": "3 USDC",
+        "usd_value": "3"
+      },
+      "risk_flags": [],
+      "skills": [],
+      "source": "github",
+      "source_id": "4439270667",
+      "summary": "### Describe the bug This issue became clearer during repeated Gateway swap testing on Solana mainnet-beta. Jupiter quote routes kept returning valid quotes, and Jupiter execution was not fully broken because the reverse direction SOL -> USDC completed successfully. The failure appears specific to the USDC -> SOL direction, where execution routes consistently fail during transaction simulation before a transaction signature is returned. ``` 2026-05-13 07:44:20 | info | Getting quote for 3 USDC…",
+      "title": "Jupiter - USDC-SOL swap execution fails at simulation on Solana mainnet-beta while SOL-USDC execution succeeds",
+      "updated_at": "2026-08-02T09:09:04+00:00",
+      "url": "https://github.com/hummingbot/gateway/issues/636"
+    },
+    "github:4514807960": {
+      "categories": [
+        "documentation",
+        "node-docs"
+      ],
+      "confidence": 0.7,
+      "deadline": null,
+      "discovered_at": "2026-05-25T06:31:02+00:00",
+      "expected_cost_usd": "0",
+      "kind": "bounty",
+      "requires_deposit": false,
+      "restrictions": [],
+      "reward": {
+        "amount": "1",
+        "currency": "USDC",
+        "kind": "fixed",
+        "text": "1 USDC",
+        "usd_value": "1"
+      },
+      "risk_flags": [],
+      "skills": [],
+      "source": "github",
+      "source_id": "4514807960",
+      "summary": "## Summary USDC on Arc has two distinct decimal representations depending on context: | Context | Decimals | Example: 1 USDC | |---|---|---| | Native gas token (used for gas fees) | 18 | `1000000000000000000` | | ERC-20 transfer / contract interaction | 6 | `1000000` | This distinction is not documented anywhere in the Arc Network developer resources. Developers who look up the USDC contract decimals correctly get `6`, but gas fee calculations from the node return values in 18-decimal format. T…",
+      "title": "USDC decimal ambiguity: 18 decimals as native gas token vs 6 decimals as ERC-20 — undocumented, causes silent value bugs",
+      "updated_at": "2026-08-02T08:47:19+00:00",
+      "url": "https://github.com/circlefin/arc-node/issues/91"
     },
     "github:4526679137": {
       "categories": [],
@@ -798,6 +1021,35 @@
       "updated_at": "2026-08-02T00:39:07+00:00",
       "url": "https://github.com/NSPG13/agent-bounties/issues/649"
     },
+    "github:5028632798": {
+      "categories": [
+        "wayfinder:map"
+      ],
+      "confidence": 0.7,
+      "deadline": null,
+      "discovered_at": "2026-07-31T10:12:11+00:00",
+      "expected_cost_usd": "0",
+      "kind": "bounty",
+      "requires_deposit": false,
+      "restrictions": [],
+      "reward": {
+        "amount": "2",
+        "currency": "USD",
+        "kind": "lottery",
+        "text": "$2",
+        "usd_value": "2"
+      },
+      "risk_flags": [],
+      "skills": [
+        "research"
+      ],
+      "source": "github",
+      "source_id": "5028632798",
+      "summary": "## Destination **Баланс и PnL на реальном кошельке сходятся с позициями, которые отдаёт Noves, — по известным токенам, — и себестоимость посчитана по ценам на момент транзакции.** Эпик #23 (Zerion → Noves) закрыл механику синка: себестоимость переносится через бридж, фантомного PnL нет, двойного учёта нет, все 319 транзакций сбалансированы. Но итоговая цифра портфеля неверна на 12 порядков, потому что **идентичность актива привязана к символу**: спам-токен с тикером `USDC` садится в счёт настоя…",
+      "title": "Верные баланс и PnL: идентичность актива (chain, contract) + фильтр неизвестных токенов",
+      "updated_at": "2026-08-02T09:15:35+00:00",
+      "url": "https://github.com/kislikjeka/moontrack/issues/34"
+    },
     "github:5034924082": {
       "categories": [
         "epic"
@@ -1063,6 +1315,33 @@
       "title": "watchdog: pulsefeed.dev needs attention",
       "updated_at": "2026-08-02T04:03:33+00:00",
       "url": "https://github.com/Nikolife2016/pulsefeed-x402/issues/7"
+    },
+    "github:5041655577": {
+      "categories": [
+        "bug"
+      ],
+      "confidence": 0.7,
+      "deadline": "2026-08-02T00:00:00+00:00",
+      "discovered_at": "2026-08-02T09:07:05+00:00",
+      "expected_cost_usd": "0",
+      "kind": "bounty",
+      "requires_deposit": false,
+      "restrictions": [],
+      "reward": {
+        "amount": "1.5",
+        "currency": "USDT",
+        "kind": "fixed",
+        "text": "1.5 USDT",
+        "usd_value": "1.5"
+      },
+      "risk_flags": [],
+      "skills": [],
+      "source": "github",
+      "source_id": "5041655577",
+      "summary": "## Contexto Primeiro fechamento real em prod (2026-08-02 09:03-09:04 UTC, posição 019fbedc, BTCUSDT Long). O insurance stop na exchange (algo 2000001329010408 @ 63122.81) disparou e zerou a posição. O detector de trailing do daemon (stop 63186.00) também disparou e tentou colocar a própria ordem de saída reduce-only. Como a exchange já estava flat, a Binance rejeitou com -2022, e o executor entrou em retry cego a cada ~5s por ~55s (11 tentativas, 2 ERRORs por tentativa) até a reverse reconcilia…",
+      "title": "executor: retry loop de exit reduce-only (-2022) após insurance stop já disparado; handoff imediato para reverse reconciliation",
+      "updated_at": "2026-08-02T09:07:05+00:00",
+      "url": "https://github.com/ldamasio/robson/issues/142"
     }
   },
   "version": 1
