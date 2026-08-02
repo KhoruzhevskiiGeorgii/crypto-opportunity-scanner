@@ -53,9 +53,15 @@ Repository variable:
 
 - optional `GALXE_SPACE_ALIASES`, comma-separated, for example `bnbchain,arbitrum`
 
-The built-in `GITHUB_TOKEN` is used for public GitHub issue search and for committing `data/state.json`.
+The built-in `GITHUB_TOKEN` is used for public GitHub issue search and for committing persistent scanner data.
 
 The workflow runs scans at `01:17`, `07:17`, `13:17`, and `19:17` UTC. It evaluates two possible UTC digest slots and sends only when the local hour in `Europe/Belgrade` is 19.
+
+## Alert journal
+
+Every opportunity successfully delivered to Telegram is stored as one JSON object per line in `data/alerts.jsonl`. The journal excludes bot tokens, chat IDs, and recipient data.
+
+After deploying this version, manually run `scan-crypto-opportunities` once with mode `recover-alert-log` to reconstruct deliveries recorded on 2026-08-02. Recovery sends no Telegram messages and is safe to repeat.
 
 ## Manual verification
 
@@ -64,7 +70,7 @@ Run the workflow manually with mode `scan`. Confirm:
 1. the workflow succeeds;
 2. at least two sources report results, or a source error is contained without stopping the others;
 3. one qualifying item produces a Telegram message for every configured account;
-4. `data/state.json` is committed;
+4. `data/state.json` and `data/alerts.jsonl` are committed when changed;
 5. running the same mode again does not resend the unchanged item.
 
 Run mode `digest` after a sub-threshold item is queued and confirm exactly one non-empty digest is sent.
@@ -101,4 +107,4 @@ All source-adapter tests use saved fixtures and mocked HTTP transports; the test
 
 ## Disable
 
-Delete or rename `.github/workflows/scan.yml`, or disable the workflow under GitHub Actions. Removing the schedule does not delete `data/state.json` or repository secrets.
+Delete or rename `.github/workflows/scan.yml`, or disable the workflow under GitHub Actions. Removing the schedule does not delete `data/state.json`, `data/alerts.jsonl`, or repository secrets.

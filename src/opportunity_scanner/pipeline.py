@@ -6,6 +6,7 @@ from decimal import Decimal
 from enum import StrEnum
 from typing import Sequence
 
+from opportunity_scanner.alerts import AlertLog, AlertRecord
 from opportunity_scanner.filtering import evaluate_safety
 from opportunity_scanner.models import DeliveryKind, ScoredOpportunity, SourceStatus
 from opportunity_scanner.scoring import is_urgent, score_opportunity
@@ -35,6 +36,7 @@ class ScannerPipeline:
         telegram: TelegramClient,
         state: ScannerState,
         store: StateStore | None,
+        alert_log: AlertLog | None,
         min_score: int,
         immediate_reward_usd: int,
         urgent_hours: int,
@@ -43,13 +45,16 @@ class ScannerPipeline:
         self.telegram = telegram
         self.state = state
         self.store = store
+        self.alert_log = alert_log
         self.min_score = min_score
         self.immediate_reward_usd = Decimal(immediate_reward_usd)
         self.urgent_hours = urgent_hours
 
     @classmethod
     def for_test(cls, **kwargs: object) -> "ScannerPipeline":
-        return cls(store=None, **kwargs)  # type: ignore[arg-type]
+        kwargs.setdefault("store", None)
+        kwargs.setdefault("alert_log", None)
+        return cls(**kwargs)  # type: ignore[arg-type]
 
     def run(self, mode: RunMode, *, now: datetime) -> PipelineResult:
         if mode == RunMode.DIGEST:
@@ -61,8 +66,22 @@ class ScannerPipeline:
             if message is None:
                 return PipelineResult((), 0, 0, 0)
             self.telegram.send(message)
-            for pending_item in list(self.state.pending_digest.values()):
-                self.state.mark_delivered(pending_item, DeliveryKind.DIGEST, now)
+            if self.alert_log is not None:
+                self.alert_log.append(
+                    [
+                        AlertRecord.from_scored(
+                            item,
+                            sent_at=now,
+                            delivery=DeliveryKind.DIGEST,
+                            recovered=False,
+                        )
+                        for item in pending
+                    ]
+                )
+            for item in pending:
+                self.state.mark_delivered(
+                    item.opportunity, DeliveryKind.DIGEST, now
+                )
             self._save()
             return PipelineResult((), len(pending), 0, 1)
 
@@ -104,6 +123,17 @@ class ScannerPipeline:
             ) or is_urgent(opportunity, now=now, hours=self.urgent_hours)
             if immediate:
                 self.telegram.send(format_immediate(scored))
+                if self.alert_log is not None:
+                    self.alert_log.append(
+                        [
+                            AlertRecord.from_scored(
+                                scored,
+                                sent_at=now,
+                                delivery=DeliveryKind.IMMEDIATE,
+                                recovered=False,
+                            )
+                        ]
+                    )
                 self.state.mark_delivered(opportunity, DeliveryKind.IMMEDIATE, now)
                 immediate_sent += 1
             else:
