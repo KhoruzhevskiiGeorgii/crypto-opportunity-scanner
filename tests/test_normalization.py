@@ -7,6 +7,8 @@ from opportunity_scanner.normalization import (
     clean_text,
     content_fingerprint,
     parse_deadline,
+    parse_explicit_deadline,
+    parse_explicit_reward,
     parse_reward,
 )
 
@@ -30,6 +32,33 @@ def test_parse_reward_detects_lottery() -> None:
     reward = parse_reward("Raffle among winners: $100 prize pool")
     assert reward.kind == RewardKind.LOTTERY
     assert reward.usd_value == Decimal("100")
+
+
+def test_parse_explicit_reward_requires_reward_language() -> None:
+    portfolio = parse_explicit_reward(
+        "Total invested: $3,150.02. Avg. buy price: $75,477.70. Trade: $13.08."
+    )
+    protocol_example = parse_explicit_reward(
+        "maxAmountRequired: 1000; 1000 USDC micro-units = $0.001"
+    )
+
+    assert portfolio.amount is None
+    assert protocol_example.amount is None
+
+
+def test_parse_explicit_reward_accepts_context_and_thousands_separator() -> None:
+    reward = parse_explicit_reward("Implementation budget / reward: 1,500 USDC")
+
+    assert reward.amount == Decimal("1500")
+    assert reward.currency == "USDC"
+    assert reward.usd_value == Decimal("1500")
+
+
+def test_parse_explicit_deadline_requires_deadline_language() -> None:
+    assert parse_explicit_deadline("Updated 2026-07-30. Reward: 200 USDC") is None
+    assert parse_explicit_deadline("Submission deadline: 2026-08-20") == datetime(
+        2026, 8, 20, tzinfo=UTC
+    )
 
 
 def test_parse_deadline_accepts_iso_and_unix_seconds() -> None:
