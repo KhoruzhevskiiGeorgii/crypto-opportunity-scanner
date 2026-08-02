@@ -61,3 +61,10 @@ def test_settings_parse_galxe_aliases_and_score() -> None:
     assert settings.galxe_access_token == "galxe-token"
     assert settings.galxe_space_aliases == ("bnbchain", "arbitrum")
     assert settings.min_score == 62
+
+
+def test_alert_log_path_and_recovery_without_telegram() -> None:
+    settings = Settings.from_env({}, require_telegram=False)
+    assert settings.telegram_bot_token == ""
+    assert settings.telegram_chat_ids == ()
+    assert settings.alert_log_path == Path("data/alerts.jsonl")
