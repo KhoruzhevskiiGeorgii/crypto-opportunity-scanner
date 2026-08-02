@@ -13,9 +13,35 @@ from dateutil import parser as date_parser
 from opportunity_scanner.models import Opportunity, Reward, RewardKind
 
 _STABLE_USD = {"USD", "USDC", "USDT", "USDG"}
-_REWARD_PATTERN = re.compile(
-    r"(?:(?P<symbol>\$)\s*)?(?P<amount>\d+(?:[.,]\d+)?)\s*(?P<suffix>[kKmM])?\s*"
-    r"(?P<currency>USDG|USDC|USDT|USD|SOL|ETH|BTC)?",
+_MONEY_PATTERN = (
+    r"(?:(?P<symbol>\$)\s*)?"
+    r"(?P<amount>\d+(?:[.,]\d+)*)\s*(?P<suffix>[kKmM])?\s*"
+    r"(?P<currency>USDG|USDC|USDT|USD|SOL|ETH|BTC)?"
+)
+_REWARD_PATTERN = re.compile(_MONEY_PATTERN, re.IGNORECASE)
+_REWARD_CUE = (
+    r"(?:fixed\s+)?(?:reward|bounty|payout|prize(?:\s+pool)?|budget|compensation|award)"
+)
+_EXPLICIT_REWARD_PATTERNS = (
+    re.compile(
+        rf"\b{_REWARD_CUE}\b\s*(?:amount\s*)?"
+        rf"(?:is|of|up\s+to|worth|:|=|-)?\s*(?P<reward>{_MONEY_PATTERN})",
+        re.IGNORECASE,
+    ),
+    re.compile(
+        rf"(?P<reward>{_MONEY_PATTERN})\s*(?:as\s+the\s+)?\b{_REWARD_CUE}\b",
+        re.IGNORECASE,
+    ),
+)
+_DATE_TOKEN = (
+    r"(?:20\d{2}-\d{2}-\d{2}(?:T[^\s.,)]+)?|"
+    r"(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|"
+    r"Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|"
+    r"Dec(?:ember)?)\s+\d{1,2},\s+20\d{2})"
+)
+_EXPLICIT_DEADLINE_PATTERN = re.compile(
+    rf"\b(?:submission\s+)?(?:deadline|due(?:\s+date)?|closes?|ends?)\b"
+    rf"\s*(?:is|on|at|:|=|-)?\s*(?P<date>{_DATE_TOKEN})",
     re.IGNORECASE,
 )
 _TRACKING_KEYS = {"fbclid", "gclid", "ref", "referral", "source"}
@@ -26,6 +52,24 @@ def clean_text(value: str, *, max_length: int | None = None) -> str:
     if max_length is not None and len(text) > max_length:
         return text[: max_length - 1].rstrip() + "…"
     return text
+
+
+def _parse_amount(value: str) -> Decimal:
+    compact = value.replace(" ", "")
+    if "," in compact and "." in compact:
+        if compact.rfind(".") > compact.rfind(","):
+            compact = compact.replace(",", "")
+        else:
+            compact = compact.replace(".", "").replace(",", ".")
+    elif "," in compact:
+        parts = compact.split(",")
+        if len(parts) > 2 or len(parts[-1]) == 3:
+            compact = "".join(parts)
+        else:
+            compact = compact.replace(",", ".")
+    elif compact.count(".") > 1:
+        compact = compact.replace(".", "")
+    return Decimal(compact)
 
 
 def parse_reward(text: str, *, kind_hint: RewardKind | None = None) -> Reward:
@@ -39,14 +83,15 @@ def parse_reward(text: str, *, kind_hint: RewardKind | None = None) -> Reward:
 
     best: tuple[Decimal, str, str] | None = None
     for match in _REWARD_PATTERN.finditer(normalized):
-        amount_text = match.group("amount").replace(",", ".")
-        amount = Decimal(amount_text)
+        amount = _parse_amount(match.group("amount"))
         suffix = (match.group("suffix") or "").lower()
         if suffix == "k":
             amount *= Decimal("1000")
         elif suffix == "m":
             amount *= Decimal("1000000")
-        currency = (match.group("currency") or ("USD" if match.group("symbol") else "")).upper()
+        currency = (
+            match.group("currency") or ("USD" if match.group("symbol") else "")
+        ).upper()
         if not currency:
             continue
         candidate = (amount, currency, match.group(0).strip())
@@ -59,6 +104,24 @@ def parse_reward(text: str, *, kind_hint: RewardKind | None = None) -> Reward:
     amount, currency, matched_text = best
     usd_value = amount if currency in _STABLE_USD else None
     return Reward(amount, currency, usd_value, kind, matched_text)
+
+
+def parse_explicit_reward(text: str, *, kind_hint: RewardKind | None = None) -> Reward:
+    candidates: list[Reward] = []
+    for pattern in _EXPLICIT_REWARD_PATTERNS:
+        for match in pattern.finditer(text):
+            reward = parse_reward(match.group(0), kind_hint=kind_hint)
+            if reward.amount is not None:
+                candidates.append(reward)
+    if not candidates:
+        fallback_kind = RewardKind.UNKNOWN if kind_hint is None else kind_hint
+        return Reward(None, None, None, fallback_kind, clean_text(text) or None)
+    return max(candidates, key=lambda reward: reward.amount or Decimal("0"))
+
+
+def parse_explicit_deadline(text: str) -> datetime | None:
+    match = _EXPLICIT_DEADLINE_PATTERN.search(text)
+    return parse_deadline(match.group("date")) if match else None
 
 
 def parse_deadline(value: str | int | float | None) -> datetime | None:
@@ -79,7 +142,9 @@ def canonicalize_url(url: str) -> str:
         for key, value in parse_qsl(parts.query, keep_blank_values=True)
         if not key.lower().startswith("utm_") and key.lower() not in _TRACKING_KEYS
     ]
-    return urlunsplit((parts.scheme.lower(), parts.netloc.lower(), parts.path, urlencode(query), ""))
+    return urlunsplit(
+        (parts.scheme.lower(), parts.netloc.lower(), parts.path, urlencode(query), "")
+    )
 
 
 def content_fingerprint(opportunity: Opportunity) -> str:
