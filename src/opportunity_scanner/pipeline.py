@@ -58,12 +58,15 @@ class ScannerPipeline:
 
     def run(self, mode: RunMode, *, now: datetime) -> PipelineResult:
         if mode == RunMode.DIGEST:
-            pending = [
-                score_opportunity(item, now=now)
-                for item in self.state.pending_digest.values()
-            ]
+            pending: list[ScoredOpportunity] = []
+            for key, item in list(self.state.pending_digest.items()):
+                if not evaluate_safety(item).accepted:
+                    self.state.pending_digest.pop(key, None)
+                    continue
+                pending.append(score_opportunity(item, now=now))
             message = format_digest(pending, ())
             if message is None:
+                self._save()
                 return PipelineResult((), 0, 0, 0)
             self.telegram.send(message)
             if self.alert_log is not None:
