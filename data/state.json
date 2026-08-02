@@ -1,5 +1,12 @@
 {
   "items": {
+    "github:2433702687": {
+      "deadline": null,
+      "digest_sent_at": null,
+      "fingerprint": "014ecac620b9804d59c568a5a35204a063db3304d8181f4ce7e2142ce47f216d",
+      "immediate_sent_at": "2026-08-02T04:37:20.486920+00:00",
+      "reward_usd": "25"
+    },
     "github:3883921310": {
       "deadline": null,
       "digest_sent_at": null,
@@ -21,12 +28,26 @@
       "immediate_sent_at": "2026-08-02T01:01:48.096470+00:00",
       "reward_usd": "100"
     },
+    "github:4084022348": {
+      "deadline": null,
+      "digest_sent_at": null,
+      "fingerprint": "877f0e1bb84de316e4a0d07bbe04a530c9cea04fa5f9962d5a2b8dd6a880760d",
+      "immediate_sent_at": null,
+      "reward_usd": "0.20"
+    },
     "github:4227389983": {
       "deadline": "2026-04-08T00:00:00+00:00",
       "digest_sent_at": null,
       "fingerprint": "5e97e6f27d7532a999a40782bcb42cea83486febe91b1af6c41bce22d5600519",
       "immediate_sent_at": null,
       "reward_usd": "15"
+    },
+    "github:4229182405": {
+      "deadline": null,
+      "digest_sent_at": null,
+      "fingerprint": "58dfcb533f2978c554ab61a151608589c66f6d4c9157302e8d09e4a6adc3901b",
+      "immediate_sent_at": null,
+      "reward_usd": "0.10"
     },
     "github:4233123358": {
       "deadline": "2026-04-16T00:00:00+00:00",
@@ -42,6 +63,20 @@
       "immediate_sent_at": "2026-08-02T01:01:48.096470+00:00",
       "reward_usd": "200"
     },
+    "github:4482338499": {
+      "deadline": null,
+      "digest_sent_at": null,
+      "fingerprint": "bf3ea2abbeede20ce59cfb84c0baedbd582b6b034f2e436a963236f8ee37e747",
+      "immediate_sent_at": "2026-08-02T04:37:20.486920+00:00",
+      "reward_usd": "1000"
+    },
+    "github:4526679137": {
+      "deadline": "2026-08-02T03:56:43+00:00",
+      "digest_sent_at": null,
+      "fingerprint": "6d26dcdb47bc0c0fb8c982574e1ea67b74f059effa527dd844cdbf126235b35d",
+      "immediate_sent_at": null,
+      "reward_usd": "5"
+    },
     "github:4614014108": {
       "deadline": null,
       "digest_sent_at": null,
@@ -56,6 +91,13 @@
       "immediate_sent_at": "2026-08-02T01:01:48.096470+00:00",
       "reward_usd": "25"
     },
+    "github:4804059201": {
+      "deadline": null,
+      "digest_sent_at": null,
+      "fingerprint": "52c0ee46bbba46550b5187632dcdec50863fcb46f0393021e87eff0a95b0d736",
+      "immediate_sent_at": null,
+      "reward_usd": "3"
+    },
     "github:4804271831": {
       "deadline": null,
       "digest_sent_at": null,
@@ -63,12 +105,33 @@
       "immediate_sent_at": null,
       "reward_usd": "10"
     },
+    "github:4821398111": {
+      "deadline": null,
+      "digest_sent_at": null,
+      "fingerprint": "b41600909727b06ac4ab36cae383466ed461f9ce567ef22ec48faea932a0c8c6",
+      "immediate_sent_at": "2026-08-02T04:37:20.486920+00:00",
+      "reward_usd": "100"
+    },
+    "github:4926432835": {
+      "deadline": null,
+      "digest_sent_at": null,
+      "fingerprint": "6e09f6bc29023305d3f14c6babfc8d8aed69664a0dab446d68004c393c3f2a18",
+      "immediate_sent_at": "2026-08-02T04:37:20.486920+00:00",
+      "reward_usd": "1000"
+    },
     "github:4972111892": {
       "deadline": null,
       "digest_sent_at": null,
       "fingerprint": "3086f79a3581a449abfb72f63c68df8d0e8d0a49c8bff62e6caecc51d720b6e6",
       "immediate_sent_at": null,
       "reward_usd": "2.01"
+    },
+    "github:4974333418": {
+      "deadline": null,
+      "digest_sent_at": null,
+      "fingerprint": "c13c8c97701efb105f4e5baa5831987dec276da8c0530916d5ce543e12074c70",
+      "immediate_sent_at": "2026-08-02T04:37:20.486920+00:00",
+      "reward_usd": "120"
     },
     "github:4984151412": {
       "deadline": null,
@@ -112,12 +175,26 @@
       "immediate_sent_at": "2026-08-02T01:01:48.096470+00:00",
       "reward_usd": "62000000"
     },
+    "github:5033031154": {
+      "deadline": null,
+      "digest_sent_at": null,
+      "fingerprint": "bc3604cb7ca0a8b760ffc3b6129c90377214f44f0438cd94a29f5a7c4b7807d6",
+      "immediate_sent_at": "2026-08-02T04:37:20.486920+00:00",
+      "reward_usd": "15000000"
+    },
     "github:5033656419": {
       "deadline": "2026-07-31T00:00:00+00:00",
       "digest_sent_at": null,
       "fingerprint": "20e861f4e2cb9d8e0b69027acc43d09c3b4424202d938739ccea6bcbd7ac8bc4",
       "immediate_sent_at": "2026-08-02T01:01:48.096470+00:00",
       "reward_usd": "1000"
+    },
+    "github:5034924082": {
+      "deadline": "2026-08-01T00:00:00+00:00",
+      "digest_sent_at": null,
+      "fingerprint": "f10a0825a8a2d66f11c34b4bd2ff548dfcdb5dc20cf57e1dd97ab5c9e78dc2cd",
+      "immediate_sent_at": null,
+      "reward_usd": "0.003"
     },
     "github:5035377641": {
       "deadline": "2026-08-02T00:00:00+00:00",
@@ -209,10 +286,80 @@
       "fingerprint": "16e3379ce725b190bd5c74c675b909fc449d9bfaad03040dc3bd7c3ba93b51ce",
       "immediate_sent_at": null,
       "reward_usd": "0.99"
+    },
+    "github:5039930192": {
+      "deadline": "2026-08-02T10:17:04+00:00",
+      "digest_sent_at": null,
+      "fingerprint": "cab95a4014f1f8e84ead3e307c90e5b38ceb6a0db5308fb21502d39394b86b8b",
+      "immediate_sent_at": "2026-08-02T04:37:20.486920+00:00",
+      "reward_usd": null
+    },
+    "github:5040037886": {
+      "deadline": "2026-08-02T00:00:00+00:00",
+      "digest_sent_at": null,
+      "fingerprint": "50b2fff5791c98bdee2ff9c679a24671929ef9a981721e92bbf18de0ed5959de",
+      "immediate_sent_at": "2026-08-02T04:37:20.486920+00:00",
+      "reward_usd": "63009.6"
+    },
+    "github:5040068635": {
+      "deadline": "2026-08-02T00:00:00+00:00",
+      "digest_sent_at": null,
+      "fingerprint": "c7157373edf024adc39b848a5d18692c4dae61f60ef1b0f7099a6652bfcb9ab7",
+      "immediate_sent_at": "2026-08-02T04:37:20.486920+00:00",
+      "reward_usd": "642300000.0"
+    },
+    "github:5040266336": {
+      "deadline": null,
+      "digest_sent_at": null,
+      "fingerprint": "5dea864c6e3a28193b836620ea61945a0913597cad6f476a870b83925c59a30c",
+      "immediate_sent_at": "2026-08-02T04:37:20.486920+00:00",
+      "reward_usd": "25"
+    },
+    "github:5040272390": {
+      "deadline": "2026-08-02T00:00:00+00:00",
+      "digest_sent_at": null,
+      "fingerprint": "9a5c48af8aa35952cd2354ffcb25770865f08c43bb411357179f36bd28d7eba1",
+      "immediate_sent_at": null,
+      "reward_usd": "1"
+    },
+    "github:5040354983": {
+      "deadline": null,
+      "digest_sent_at": null,
+      "fingerprint": "c16e4094c3467e0d896445a66ab41bea5fd17bb1b617e3631c5f8043dc832859",
+      "immediate_sent_at": null,
+      "reward_usd": "3"
+    },
+    "github:5040380685": {
+      "deadline": null,
+      "digest_sent_at": null,
+      "fingerprint": "f7946f5f152d5d6f81de1bce0cd54fe638cbf60e22f70df773e00d3532129f3d",
+      "immediate_sent_at": "2026-08-02T04:37:20.486920+00:00",
+      "reward_usd": "20"
+    },
+    "github:5040494729": {
+      "deadline": "2026-08-02T00:00:00+00:00",
+      "digest_sent_at": null,
+      "fingerprint": "97fdc216972a6bfe6bea1d861e263a3b613964816b21b9e42b0f9870235b3c30",
+      "immediate_sent_at": null,
+      "reward_usd": "1"
+    },
+    "github:5040572926": {
+      "deadline": "2026-08-02T04:03:30+00:00",
+      "digest_sent_at": null,
+      "fingerprint": "9283bf9f447c6a2604e72c19915734de17b5aa17d54d26d862930110d76f630c",
+      "immediate_sent_at": null,
+      "reward_usd": "5.01"
+    },
+    "github:5040574087": {
+      "deadline": null,
+      "digest_sent_at": null,
+      "fingerprint": "ef3c51afc6bf61a03a31386744230d27cc9cc6e8661d8b0c0ac722467df2cafa",
+      "immediate_sent_at": "2026-08-02T04:37:20.486920+00:00",
+      "reward_usd": "520"
     }
   },
   "last_success": {
-    "github": "2026-08-02T01:01:48.096470+00:00"
+    "github": "2026-08-02T04:37:20.486920+00:00"
   },
   "pending_digest": {
     "github:3883921310": {
@@ -277,6 +424,33 @@
       "updated_at": "2026-08-02T00:20:51+00:00",
       "url": "https://github.com/Scottcjn/rustchain-bounties/issues/71"
     },
+    "github:4084022348": {
+      "categories": [
+        "bounty"
+      ],
+      "confidence": 0.7,
+      "deadline": null,
+      "discovered_at": "2026-03-16T18:12:44+00:00",
+      "expected_cost_usd": "0",
+      "kind": "bounty",
+      "requires_deposit": false,
+      "restrictions": [],
+      "reward": {
+        "amount": "0.20",
+        "currency": "USD",
+        "kind": "fixed",
+        "text": "$0.20",
+        "usd_value": "0.20"
+      },
+      "risk_flags": [],
+      "skills": [],
+      "source": "github",
+      "source_id": "4084022348",
+      "summary": "## Bounty: 2 RTC ### What to do 1. Visit [BoTTube on ToolPilot.ai](https://www.toolpilot.ai/products/bottube-1) 2. Click \"Write a Review\" 3. Leave an **honest** review based on your experience with [bottube.ai](https://bottube.ai) 4. Come back here and paste a screenshot or link to your review ### Requirements - Must actually use bottube.ai first (browse videos, upload one, comment, etc.) - Review must be honest — we want real feedback, not just \"great platform\" - Mention at least one specific…",
+      "title": "[EASY BOUNTY: 2 RTC] Leave an Honest Review of BoTTube on ToolPilot.ai",
+      "updated_at": "2026-08-02T02:48:46+00:00",
+      "url": "https://github.com/Scottcjn/rustchain-bounties/issues/2155"
+    },
     "github:4227389983": {
       "categories": [],
       "confidence": 0.7,
@@ -302,6 +476,65 @@
       "updated_at": "2026-07-28T14:25:53+00:00",
       "url": "https://github.com/pasosdeJesus/learn.tg/issues/128"
     },
+    "github:4229182405": {
+      "categories": [
+        "good first issue",
+        "bounty",
+        "multi-claim",
+        "easy",
+        "community",
+        "onboarding"
+      ],
+      "confidence": 0.7,
+      "deadline": null,
+      "discovered_at": "2026-04-09T03:26:26+00:00",
+      "expected_cost_usd": "0",
+      "kind": "bounty",
+      "requires_deposit": false,
+      "restrictions": [],
+      "reward": {
+        "amount": "0.10",
+        "currency": "USD",
+        "kind": "fixed",
+        "text": "$0.10 USD",
+        "usd_value": "0.10"
+      },
+      "risk_flags": [],
+      "skills": [],
+      "source": "github",
+      "source_id": "4229182405",
+      "summary": "## Mine for 24 Hours and Share Your Report **Reward: 1 RTC (~$0.10 USD) — Multi-claim: first 50 people** ### Goal Run the RustChain miner on ANY computer for 24 hours and share your hardware fingerprint report. ### Steps 1. Install the miner: ```bash curl -fsSL https://rustchain.org/install.sh | bash -s -- --wallet YOUR-NAME-HERE ``` 2. Let it run for 24 hours 3. Share your hardware report: ```bash cat ~/.rustchain/miner.log | grep \"device\\|attestation\\|fingerprint\" | tail -20 ``` 4. Open a cla…",
+      "title": "[BOUNTY: 1 RTC] Run the RustChain Miner for 24 Hours and Share Your Hardware Report",
+      "updated_at": "2026-08-02T03:37:12+00:00",
+      "url": "https://github.com/Scottcjn/rustchain-bounties/issues/2870"
+    },
+    "github:4526679137": {
+      "categories": [],
+      "confidence": 0.7,
+      "deadline": "2026-08-02T03:56:43+00:00",
+      "discovered_at": "2026-05-26T18:53:56+00:00",
+      "expected_cost_usd": "0",
+      "kind": "bounty",
+      "requires_deposit": false,
+      "restrictions": [],
+      "reward": {
+        "amount": "5",
+        "currency": "USDT",
+        "kind": "fixed",
+        "text": "5 USDT",
+        "usd_value": "5"
+      },
+      "risk_flags": [],
+      "skills": [
+        "research"
+      ],
+      "source": "github",
+      "source_id": "4526679137",
+      "summary": "<!-- five-dollars-status-issue --> # Five dollar support status This issue is maintained automatically by the daily workflow. It keeps the optional support request and the latest opportunity shortlist visible in one stable GitHub surface. ## Who it helps Grant writers, business development teams, proposal teams, software companies, AI labs, cybersecurity teams, data teams, cloud teams, and research groups can use this as a daily shortlist of relevant U.S. government grants and contracts. ## Opt…",
+      "title": "Five dollar support status",
+      "updated_at": "2026-08-02T03:56:45+00:00",
+      "url": "https://github.com/awkwardsky/five-dollars/issues/1"
+    },
     "github:4614014108": {
       "categories": [],
       "confidence": 0.7,
@@ -326,6 +559,34 @@
       "title": "Mission 13: ERC-7710 Community Caveat Enforcers Registry",
       "updated_at": "2026-07-28T21:31:30+00:00",
       "url": "https://github.com/intuition-box/Caveats-Enforcers/issues/1"
+    },
+    "github:4804059201": {
+      "categories": [
+        "bounty",
+        "agent-task"
+      ],
+      "confidence": 0.7,
+      "deadline": null,
+      "discovered_at": "2026-07-03T14:00:07+00:00",
+      "expected_cost_usd": "0",
+      "kind": "bounty",
+      "requires_deposit": false,
+      "restrictions": [],
+      "reward": {
+        "amount": "3",
+        "currency": "USDC",
+        "kind": "fixed",
+        "text": "$3 USDC",
+        "usd_value": "3"
+      },
+      "risk_flags": [],
+      "skills": [],
+      "source": "github",
+      "source_id": "4804059201",
+      "summary": "## Context The `runtime-opportunity-scout` currently queries Gitcoin Grants and GitHub labeled issues. [Algora](https://algora.io) is a major bounty platform with a public API that lists real paid open-source tasks. ## Task 1. Add Algora API integration to `runtime-opportunity-scout` 2. Parse bounty data: title, URL, reward_usd, tech stack 3. Insert into `runtime_jobs` with idempotent SHA-1 task_id based on Algora bounty URL 4. `reward_usd` must be real extracted value, or `null` if not parseab…",
+      "title": "🔍 [Agent Task] Add Algora bounty discovery to runtime-opportunity-scout",
+      "updated_at": "2026-08-02T02:41:59+00:00",
+      "url": "https://github.com/Nexussyn/ai-growth-platform/issues/4"
     },
     "github:4804271831": {
       "categories": [
@@ -537,6 +798,33 @@
       "updated_at": "2026-08-02T00:39:07+00:00",
       "url": "https://github.com/NSPG13/agent-bounties/issues/649"
     },
+    "github:5034924082": {
+      "categories": [
+        "epic"
+      ],
+      "confidence": 0.7,
+      "deadline": "2026-08-01T00:00:00+00:00",
+      "discovered_at": "2026-08-01T02:59:13+00:00",
+      "expected_cost_usd": "0",
+      "kind": "bounty",
+      "requires_deposit": false,
+      "restrictions": [],
+      "reward": {
+        "amount": "0.003",
+        "currency": "USDC",
+        "kind": "fixed",
+        "text": "0.003 USDC",
+        "usd_value": "0.003"
+      },
+      "risk_flags": [],
+      "skills": [],
+      "source": "github",
+      "source_id": "5034924082",
+      "summary": "Migrate `toon-protocol/buzz` (fork of block/buzz — Rust relay-centric workspace for humans + agents) to TOON: replace buzz-relay with the TOON relay + connector, route all writes through paid channels, replace Blossom media with the store node, and rebuild server features TOON-natively. Full decision record lives in the buzz fork: `CONTEXT.md` + `docs/adr/0001–0003` (PR linked below). ## Decisions (grilled + confirmed 2026-08-01) 1. **Privacy**: encrypted groups from day one; private channels a…",
+      "title": "Epic: migrate the buzz fork to TOON (relay swap, encrypted groups, store media, relay-native huddles)",
+      "updated_at": "2026-08-02T04:04:10+00:00",
+      "url": "https://github.com/toon-protocol/toon-meta/issues/256"
+    },
     "github:5035377641": {
       "categories": [
         "help wanted",
@@ -669,6 +957,112 @@
       "title": "Paid child solver: enforce an explicit wallet approval cap (0.99 USDC)",
       "updated_at": "2026-08-02T00:42:58+00:00",
       "url": "https://github.com/guigaoliveira/agent-wallet-approval-bounty/issues/1"
+    },
+    "github:5040272390": {
+      "categories": [
+        "bounty-alert"
+      ],
+      "confidence": 0.7,
+      "deadline": "2026-08-02T00:00:00+00:00",
+      "discovered_at": "2026-08-02T02:47:12+00:00",
+      "expected_cost_usd": "0",
+      "kind": "bounty",
+      "requires_deposit": false,
+      "restrictions": [],
+      "reward": {
+        "amount": "1",
+        "currency": "USDC",
+        "kind": "fixed",
+        "text": "1 USDC",
+        "usd_value": "1"
+      },
+      "risk_flags": [],
+      "skills": [],
+      "source": "github",
+      "source_id": "5040272390",
+      "summary": "### Active Bounty Scan Results **Scan Time:** 2026-08-02 02:47 UTC #### 1. [🎯 Bounty Alert: 8 New Opportunityies found](https://github.com/freedom-winds/BountyScout/issues/371) - **Repository:** [freedom-winds/BountyScout](https://github.com/freedom-winds/BountyScout) - **Comments:** 0 - **Last Updated:** 2026-08-02T02:44:00Z #### 2. [Bounty chip renders ~8 stage px tall — below a glanceable size](https://github.com/fol2/glassvow/issues/81) - **Repository:** [fol2/glassvow](https://github.com/f…",
+      "title": "🎯 Bounty Alert: 9 New Opportunityies found",
+      "updated_at": "2026-08-02T02:47:12+00:00",
+      "url": "https://github.com/vansh-09/BountyScout/issues/576"
+    },
+    "github:5040354983": {
+      "categories": [],
+      "confidence": 0.7,
+      "deadline": null,
+      "discovered_at": "2026-08-02T03:06:29+00:00",
+      "expected_cost_usd": "0",
+      "kind": "bounty",
+      "requires_deposit": false,
+      "restrictions": [],
+      "reward": {
+        "amount": "3",
+        "currency": "USDC",
+        "kind": "fixed",
+        "text": "3 USDC",
+        "usd_value": "3"
+      },
+      "risk_flags": [],
+      "skills": [],
+      "source": "github",
+      "source_id": "5040354983",
+      "summary": "## Summary The deployed solver (`raxol-solver`, `Raxol.ACP.Xochi.SolverAgent`) **sets a job's budget on-chain but never settles it after funding**. On a buyer-driven job, `setBudget` fires (provider-only, confirmed on-chain) but on `job.funded` the solver does **not** execute the Xochi intent — the intent stays `quoted` forever and the job is stuck at `funded`. This is the first time the *deployed* solver's `job.funded -> settle` path has actually been exercised: the earlier `--route acp` gate…",
+      "title": "Deployed SolverAgent doesn't settle funded jobs (Xochi intent stays quoted)",
+      "updated_at": "2026-08-02T03:06:29+00:00",
+      "url": "https://github.com/DROOdotFOO/raxol/issues/772"
+    },
+    "github:5040494729": {
+      "categories": [
+        "bounty-alert"
+      ],
+      "confidence": 0.7,
+      "deadline": "2026-08-02T00:00:00+00:00",
+      "discovered_at": "2026-08-02T03:43:09+00:00",
+      "expected_cost_usd": "0",
+      "kind": "bounty",
+      "requires_deposit": false,
+      "restrictions": [],
+      "reward": {
+        "amount": "1",
+        "currency": "USDC",
+        "kind": "fixed",
+        "text": "1 USDC",
+        "usd_value": "1"
+      },
+      "risk_flags": [],
+      "skills": [],
+      "source": "github",
+      "source_id": "5040494729",
+      "summary": "### Active Bounty Scan Results **Scan Time:** 2026-08-02 03:43 UTC #### 1. [Independent security and release review requested for PR #1](https://github.com/vtino17/promptwall/issues/2) - **Repository:** [vtino17/promptwall](https://github.com/vtino17/promptwall) - **Comments:** 0 - **Last Updated:** 2026-08-02T03:13:02Z #### 2. [Independent security and release review requested for PR #11](https://github.com/vtino17/taskcapsule/issues/12) - **Repository:** [vtino17/taskcapsule](https://github.c…",
+      "title": "🎯 Bounty Alert: 9 New Opportunityies found",
+      "updated_at": "2026-08-02T03:43:09+00:00",
+      "url": "https://github.com/dev-kp-eloper/BountyScout/issues/723"
+    },
+    "github:5040572926": {
+      "categories": [
+        "watchdog"
+      ],
+      "confidence": 0.7,
+      "deadline": "2026-08-02T04:03:30+00:00",
+      "discovered_at": "2026-08-02T04:03:33+00:00",
+      "expected_cost_usd": "0",
+      "kind": "bounty",
+      "requires_deposit": false,
+      "restrictions": [],
+      "reward": {
+        "amount": "5.01",
+        "currency": "USDC",
+        "kind": "fixed",
+        "text": "5.01 USDC",
+        "usd_value": "5.01"
+      },
+      "risk_flags": [],
+      "skills": [],
+      "source": "github",
+      "source_id": "5040572926",
+      "summary": "Automated external check failed at 2026-08-02T04:03:30Z UTC. - could not read the domain expiry from RDAP; the expiry check did not run - domain expires in 0 days (Z) — renew it --- TLS days left: 63 · domain days left: 0 · buyer wallet: 5.01 USDC Re-run: Actions → watchdog → Run workflow. This issue is updated in place while the condition persists and closed automatically once every check passes.",
+      "title": "watchdog: pulsefeed.dev needs attention",
+      "updated_at": "2026-08-02T04:03:33+00:00",
+      "url": "https://github.com/Nikolife2016/pulsefeed-x402/issues/7"
     }
   },
   "version": 1
