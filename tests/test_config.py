@@ -18,7 +18,7 @@ def test_settings_load_required_and_default_values() -> None:
     assert settings.min_score == 55
     assert settings.immediate_reward_usd == 20
     assert settings.urgent_hours == 48
-    assert settings.digest_hour == 19
+    assert settings.digest_hour == 9
     assert settings.timezone == "Europe/Belgrade"
     assert settings.state_path == Path("data/state.json")
     assert settings.galxe_space_aliases == ()
