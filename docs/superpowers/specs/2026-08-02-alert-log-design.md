@@ -46,7 +46,7 @@ A small append-only store responsible for:
 - suppressing duplicate records;
 - writing atomically through a temporary file and rename.
 
-A record identity is the tuple `(opportunity_key, delivery, sent_at)`. This permits a materially updated opportunity to be delivered and logged again at a later time while making workflow retries idempotent.
+A record identity is the tuple `(opportunity_key, delivery, sent_at)`. This permits a materially updated opportunity to be delivered and logged again at a later time while making journal writes idempotent.
 
 ### Pipeline integration
 
@@ -94,7 +94,7 @@ The commit step checks both files together, stages both, rebases, and pushes as 
 ## Error handling
 
 - A Telegram failure prevents both state delivery markers and log appends for that attempted message.
-- A log write failure makes the workflow fail rather than silently losing the audit trail. The Telegram message may already have been delivered in this narrow case; the next retry remains safe because the delivery marker is saved only together with the normal persistence phase and journal identities are deduplicated.
+- A log write failure makes the workflow fail rather than silently reporting success. Since Telegram does not provide an idempotency key, a process failure after Telegram accepts a message but before state and log persistence can cause that message to be sent again on retry. This narrow crash window is accepted; journal deduplication still prevents duplicate rows with the same delivery identity.
 - A source failure during recovery does not abort recovery for other sources. Unmatched delivered state items become incomplete records.
 - Malformed existing JSONL fails loudly with a line number so journal corruption is not silently ignored.
 
@@ -117,10 +117,10 @@ Existing pipeline, Telegram fan-out, state, and source tests must continue to pa
 
 ## Success criteria
 
-After deployment:
+After deployment and for every normally completed run:
 
 1. every opportunity successfully delivered to Telegram appears once in `data/alerts.jsonl` for that delivery event;
-2. workflow retries do not duplicate rows;
+2. repeated journal writes do not duplicate rows;
 3. no secrets or recipient identifiers appear in the log;
 4. the 2026-08-02 delivery history is reconstructed as completely as current source availability permits;
 5. a later request such as “Посмотри, что бот прислал сегодня” can be answered by reading the journal from GitHub.
