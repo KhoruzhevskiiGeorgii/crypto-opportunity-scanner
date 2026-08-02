@@ -35,9 +35,9 @@ opportunity-scanner digest
 
 1. Open `@BotFather` in Telegram.
 2. Run `/newbot`, choose a name and username, and copy the bot token.
-3. Send one message to the new bot.
-4. Open `https://api.telegram.org/bot<TOKEN>/getUpdates` in a browser and copy `message.chat.id`.
-5. Store the token as GitHub secret `TELEGRAM_BOT_TOKEN` and the ID as `TELEGRAM_CHAT_ID`.
+3. Open the bot from every Telegram account that should receive alerts and press **Start**.
+4. After each account has contacted the bot, open `https://api.telegram.org/bot<TOKEN>/getUpdates` and copy every distinct `message.chat.id`.
+5. Store the token as GitHub secret `TELEGRAM_BOT_TOKEN`. Store all recipient IDs as the comma-separated secret `TELEGRAM_CHAT_IDS`, for example `123456789,987654321`.
 
 The bot is outbound-only. The scanner does not accept commands and does not expose a webhook.
 
@@ -46,7 +46,7 @@ The bot is outbound-only. The scanner does not accept commands and does not expo
 Repository secrets:
 
 - `TELEGRAM_BOT_TOKEN`
-- `TELEGRAM_CHAT_ID`
+- `TELEGRAM_CHAT_IDS`, comma-separated; one ID is also valid
 - optional `GALXE_ACCESS_TOKEN`
 
 Repository variable:
@@ -63,7 +63,7 @@ Run the workflow manually with mode `scan`. Confirm:
 
 1. the workflow succeeds;
 2. at least two sources report results, or a source error is contained without stopping the others;
-3. one qualifying item produces a Telegram message;
+3. one qualifying item produces a Telegram message for every configured account;
 4. `data/state.json` is committed;
 5. running the same mode again does not resend the unchanged item.
 
@@ -87,7 +87,7 @@ Never add any of the following to repository secrets or configuration:
 - unrestricted exchange API keys;
 - credentials used for mass accounts, social automation, or captcha bypassing.
 
-The only required external credentials are the Telegram bot token and private chat ID.
+The only required external credentials are the Telegram bot token and the private recipient chat IDs.
 
 ## Development
 

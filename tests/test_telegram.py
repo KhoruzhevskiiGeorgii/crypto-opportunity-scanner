@@ -3,6 +3,7 @@ from datetime import UTC, datetime
 from decimal import Decimal
 
 import httpx
+import pytest
 
 from opportunity_scanner.models import (
     Opportunity,
@@ -12,7 +13,12 @@ from opportunity_scanner.models import (
     ScoredOpportunity,
     SourceStatus,
 )
-from opportunity_scanner.telegram import TelegramClient, format_digest, format_immediate
+from opportunity_scanner.telegram import (
+    TelegramClient,
+    TelegramDeliveryError,
+    format_digest,
+    format_immediate,
+)
 
 
 def scored() -> ScoredOpportunity:
@@ -49,7 +55,7 @@ def test_empty_digest_is_suppressed() -> None:
     assert format_digest([], [SourceStatus("github", True, 0)]) is None
 
 
-def test_send_uses_telegram_bot_api() -> None:
+def test_send_posts_once_per_chat_id() -> None:
     requests: list[httpx.Request] = []
 
     def handler(request: httpx.Request) -> httpx.Response:
@@ -57,6 +63,33 @@ def test_send_uses_telegram_bot_api() -> None:
         return httpx.Response(200, json={"ok": True})
 
     with httpx.Client(transport=httpx.MockTransport(handler)) as client:
-        TelegramClient(client, token="secret", chat_id="123").send("hello")
-    assert str(requests[0].url) == "https://api.telegram.org/botsecret/sendMessage"
-    assert json.loads(requests[0].content)["chat_id"] == "123"
+        TelegramClient(client, token="secret", chat_ids=("111", "222")).send("hello")
+
+    assert [str(request.url) for request in requests] == [
+        "https://api.telegram.org/botsecret/sendMessage",
+        "https://api.telegram.org/botsecret/sendMessage",
+    ]
+    assert [json.loads(request.content)["chat_id"] for request in requests] == [
+        "111",
+        "222",
+    ]
+
+
+def test_send_attempts_later_chat_ids_before_raising_aggregated_error() -> None:
+    requested_chat_ids: list[str] = []
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        chat_id = json.loads(request.content)["chat_id"]
+        requested_chat_ids.append(chat_id)
+        if chat_id == "111":
+            return httpx.Response(403, json={"ok": False, "description": "blocked"})
+        return httpx.Response(200, json={"ok": True})
+
+    with httpx.Client(transport=httpx.MockTransport(handler)) as client:
+        with pytest.raises(TelegramDeliveryError, match="111") as error:
+            TelegramClient(client, token="secret", chat_ids=("111", "222")).send(
+                "hello"
+            )
+
+    assert requested_chat_ids == ["111", "222"]
+    assert [failure.chat_id for failure in error.value.failures] == ["111"]

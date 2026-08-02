@@ -9,7 +9,7 @@ from typing import Mapping
 @dataclass(frozen=True, slots=True)
 class Settings:
     telegram_bot_token: str
-    telegram_chat_id: str
+    telegram_chat_ids: tuple[str, ...]
     galxe_access_token: str | None
     galxe_space_aliases: tuple[str, ...]
     min_score: int
@@ -24,11 +24,16 @@ class Settings:
     def from_env(cls, env: Mapping[str, str] | None = None) -> "Settings":
         values = os.environ if env is None else env
         bot_token = values.get("TELEGRAM_BOT_TOKEN", "").strip()
-        chat_id = values.get("TELEGRAM_CHAT_ID", "").strip()
+        raw_chat_ids = values.get("TELEGRAM_CHAT_IDS", "")
+        chat_ids = tuple(
+            dict.fromkeys(
+                part.strip() for part in raw_chat_ids.split(",") if part.strip()
+            )
+        )
         if not bot_token:
             raise ValueError("TELEGRAM_BOT_TOKEN is required")
-        if not chat_id:
-            raise ValueError("TELEGRAM_CHAT_ID is required")
+        if not chat_ids:
+            raise ValueError("TELEGRAM_CHAT_IDS is required")
 
         raw_aliases = values.get("GALXE_SPACE_ALIASES", "")
         aliases = tuple(
@@ -40,7 +45,7 @@ class Settings:
 
         return cls(
             telegram_bot_token=bot_token,
-            telegram_chat_id=chat_id,
+            telegram_chat_ids=chat_ids,
             galxe_access_token=values.get("GALXE_ACCESS_TOKEN", "").strip() or None,
             galxe_space_aliases=aliases,
             min_score=min_score,

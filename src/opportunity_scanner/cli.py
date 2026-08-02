@@ -42,7 +42,7 @@ def main() -> int:
             telegram=TelegramClient(
                 client,
                 token=settings.telegram_bot_token,
-                chat_id=settings.telegram_chat_id,
+                chat_ids=settings.telegram_chat_ids,
             ),
             state=store.load(),
             store=store,

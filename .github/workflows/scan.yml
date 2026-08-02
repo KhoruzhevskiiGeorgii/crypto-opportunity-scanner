@@ -62,7 +62,7 @@ jobs:
         if: steps.mode.outputs.should_run == 'true'
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_CHAT_IDS: ${{ secrets.TELEGRAM_CHAT_IDS }}
           GALXE_ACCESS_TOKEN: ${{ secrets.GALXE_ACCESS_TOKEN }}
           GALXE_SPACE_ALIASES: ${{ vars.GALXE_SPACE_ALIASES }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

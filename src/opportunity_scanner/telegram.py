@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from dataclasses import dataclass
 from html import escape
 from typing import Sequence
 
@@ -57,23 +58,48 @@ def format_digest(
     return "\n".join(lines)
 
 
+@dataclass(frozen=True, slots=True)
+class TelegramDeliveryFailure:
+    chat_id: str
+    error: str
+
+
+class TelegramDeliveryError(RuntimeError):
+    def __init__(self, failures: Sequence[TelegramDeliveryFailure]) -> None:
+        self.failures = tuple(failures)
+        details = "; ".join(
+            f"{failure.chat_id}: {failure.error}" for failure in self.failures
+        )
+        super().__init__(f"Telegram delivery failed for {details}")
+
+
 class TelegramClient:
-    def __init__(self, client: httpx.Client, *, token: str, chat_id: str) -> None:
+    def __init__(
+        self, client: httpx.Client, *, token: str, chat_ids: Sequence[str]
+    ) -> None:
         self.client = client
         self.token = token
-        self.chat_id = chat_id
+        self.chat_ids = tuple(chat_ids)
 
     def send(self, text: str) -> None:
-        response = self.client.post(
-            f"https://api.telegram.org/bot{self.token}/sendMessage",
-            json={
-                "chat_id": self.chat_id,
-                "text": text,
-                "parse_mode": "HTML",
-                "disable_web_page_preview": True,
-            },
-        )
-        response.raise_for_status()
-        payload = response.json()
-        if payload.get("ok") is not True:
-            raise RuntimeError(f"Telegram rejected message: {payload}")
+        failures: list[TelegramDeliveryFailure] = []
+        for chat_id in self.chat_ids:
+            try:
+                response = self.client.post(
+                    f"https://api.telegram.org/bot{self.token}/sendMessage",
+                    json={
+                        "chat_id": chat_id,
+                        "text": text,
+                        "parse_mode": "HTML",
+                        "disable_web_page_preview": True,
+                    },
+                )
+                response.raise_for_status()
+                payload = response.json()
+                if not isinstance(payload, dict) or payload.get("ok") is not True:
+                    raise RuntimeError(f"Telegram rejected message: {payload}")
+            except (httpx.HTTPError, ValueError, RuntimeError) as exc:
+                failures.append(TelegramDeliveryFailure(chat_id, str(exc)))
+
+        if failures:
+            raise TelegramDeliveryError(failures)
