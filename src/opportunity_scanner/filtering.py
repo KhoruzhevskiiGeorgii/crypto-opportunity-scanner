@@ -11,6 +11,26 @@ class FilterDecision:
     risk_flags: tuple[str, ...]
 
 
+_GITHUB_REJECTION_RULES: tuple[tuple[str, tuple[str, ...]], ...] = (
+    (
+        "unfunded_bounty",
+        (
+            "not yet created or funded",
+            "not yet funded",
+            "do not start paid work until",
+        ),
+    ),
+    (
+        "bounty_aggregator",
+        (
+            "active bounty scan results",
+            "new opportunities found",
+            "bounty alert:",
+        ),
+    ),
+)
+
+
 _RULES: tuple[tuple[str, tuple[str, ...]], ...] = (
     ("credential_theft", ("seed phrase", "private key", "recovery phrase", "unrestricted api key")),
     (
@@ -35,6 +55,10 @@ def evaluate_safety(opportunity: Opportunity) -> FilterDecision:
         if reward.amount is None:
             flags.append("reward_not_explicit")
             reasons.append("GitHub issue has no explicitly labelled reward")
+        for flag, needles in _GITHUB_REJECTION_RULES:
+            if any(needle in text for needle in needles):
+                flags.append(flag)
+                reasons.append(f"matched non-actionable GitHub rule: {flag}")
     for flag, needles in _RULES:
         if any(needle in text for needle in needles):
             flags.append(flag)
