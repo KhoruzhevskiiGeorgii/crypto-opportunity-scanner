@@ -1,6 +1,7 @@
 from dataclasses import dataclass
 
 from opportunity_scanner.models import Opportunity
+from opportunity_scanner.normalization import parse_explicit_reward
 
 
 @dataclass(frozen=True, slots=True)
@@ -29,6 +30,11 @@ def evaluate_safety(opportunity: Opportunity) -> FilterDecision:
     if opportunity.requires_deposit:
         flags.append("upfront_deposit")
         reasons.append("requires an upfront deposit")
+    if opportunity.source == "github":
+        reward = parse_explicit_reward(f"{opportunity.title}\n{opportunity.summary}")
+        if reward.amount is None:
+            flags.append("reward_not_explicit")
+            reasons.append("GitHub issue has no explicitly labelled reward")
     for flag, needles in _RULES:
         if any(needle in text for needle in needles):
             flags.append(flag)

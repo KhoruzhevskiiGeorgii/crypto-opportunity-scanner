@@ -1,17 +1,20 @@
 from __future__ import annotations
 
-import re
 from datetime import datetime
 from decimal import Decimal
 
 import httpx
 
 from opportunity_scanner.models import Opportunity, OpportunityKind
-from opportunity_scanner.normalization import clean_text, parse_deadline, parse_reward
+from opportunity_scanner.normalization import (
+    clean_text,
+    parse_deadline,
+    parse_explicit_deadline,
+    parse_explicit_reward,
+)
 from opportunity_scanner.sources.base import SourceFetchError
 
 _SKILLS = ("python", "analytics", "mathematics", "research", "technical writing", "translation")
-_DATE_PATTERN = re.compile(r"\b20\d{2}-\d{2}-\d{2}(?:T[^\s.,)]+)?")
 
 
 class GitHubSource:
@@ -65,8 +68,9 @@ class GitHubSource:
             for item in response.json().get("items", []):
                 if "pull_request" in item:
                     continue
-                combined = clean_text(f"{item.get('title', '')} {item.get('body') or ''}")
-                reward = parse_reward(combined)
+                raw_text = f"{item.get('title', '')}\n{item.get('body') or ''}"
+                combined = clean_text(raw_text)
+                reward = parse_explicit_reward(raw_text)
                 if reward.amount is None:
                     continue
                 labels = tuple(label["name"].lower() for label in item.get("labels", []))
@@ -74,8 +78,7 @@ class GitHubSource:
                 skills = tuple(
                     skill for skill in _SKILLS if skill in lower or skill in labels
                 )
-                date_match = _DATE_PATTERN.search(combined)
-                deadline = parse_deadline(date_match.group(0)) if date_match else None
+                deadline = parse_explicit_deadline(raw_text)
                 opportunity = Opportunity(
                     source_id=str(item["id"]),
                     source=self.name,

@@ -212,3 +212,31 @@ def test_digest_logs_each_item_with_shared_timestamp(tmp_path: Path) -> None:
     assert {record.opportunity_key for record in records} == {"good:1", "good:2"}
     assert {record.delivery.value for record in records} == {"digest"}
     assert {record.sent_at for record in records} == {now.isoformat()}
+
+
+def test_digest_drops_stale_github_false_positive() -> None:
+    telegram = FakeTelegram()
+    state = ScannerState.empty()
+    false_positive_data = item(reward="10").to_dict()
+    false_positive_data.update(
+        {
+            "source": "github",
+            "title": "Trade successful: spent $13.08 on BTC/USDT",
+            "summary": "Total invested: $3,150.02. Avg. buy price: $75,477.70.",
+        }
+    )
+    state.queue_digest(Opportunity.from_dict(false_positive_data))
+    pipeline = ScannerPipeline.for_test(
+        sources=[],
+        telegram=telegram,
+        state=state,
+        min_score=55,
+        immediate_reward_usd=20,
+        urgent_hours=48,
+    )
+
+    result = pipeline.run(RunMode.DIGEST, now=datetime(2026, 8, 2, 17, tzinfo=UTC))
+
+    assert result.digest_sent == 0
+    assert telegram.messages == []
+    assert state.pending_digest == {}
