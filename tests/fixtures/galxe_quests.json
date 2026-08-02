@@ -1,0 +1,26 @@
+{
+  "data": {
+    "space": {
+      "id": "40",
+      "name": "BNB Chain",
+      "alias": "bnbchain",
+      "campaigns": {
+        "pageInfo": {"endCursor": "1", "hasNextPage": false},
+        "list": [
+          {
+            "id": "GC123",
+            "name": "Learn Web3 and earn points",
+            "type": "Points",
+            "status": "Active",
+            "description": "Complete educational tasks. No deposit required.",
+            "startTime": 1785600000,
+            "endTime": 1786204800,
+            "participantsCount": 100,
+            "loyaltyPoints": 50,
+            "gasType": "Gasless"
+          }
+        ]
+      }
+    }
+  }
+}
