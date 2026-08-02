@@ -5,11 +5,13 @@ from opportunity_scanner.filtering import evaluate_safety
 from opportunity_scanner.models import Opportunity, OpportunityKind, Reward, RewardKind
 
 
-def make_opportunity(summary: str, *, deposit: bool = False) -> Opportunity:
+def make_opportunity(
+    summary: str, *, deposit: bool = False, source: str = "test"
+) -> Opportunity:
     now = datetime(2026, 8, 2, tzinfo=UTC)
     return Opportunity(
         source_id="x",
-        source="test",
+        source=source,
         kind=OpportunityKind.QUEST,
         title="Quest",
         summary=summary,
@@ -48,3 +50,15 @@ def test_rejects_sybil_and_captcha_automation() -> None:
 def test_accepts_manual_research_bounty() -> None:
     decision = evaluate_safety(make_opportunity("Write a manual competitor research report"))
     assert decision.accepted is True
+
+
+def test_rejects_github_issue_without_explicit_reward_context() -> None:
+    decision = evaluate_safety(
+        make_opportunity(
+            "Total invested: $3,150.02. Avg. buy price: $75,477.70.",
+            source="github",
+        )
+    )
+
+    assert decision.accepted is False
+    assert "reward_not_explicit" in decision.risk_flags
