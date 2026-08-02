@@ -11,7 +11,7 @@ on:
         options: [scan, digest, recover-alert-log]
   schedule:
     - cron: "17 1,7,13,19 * * *"
-    - cron: "23 17,18 * * *"
+    - cron: "23 7,8 * * *"
 
 permissions:
   contents: write
@@ -50,7 +50,7 @@ jobs:
           else
             BELGRADE_HOUR="$(TZ=Europe/Belgrade date '+%H')"
             echo "mode=digest" >> "$GITHUB_OUTPUT"
-            if [ "$BELGRADE_HOUR" = "19" ]; then
+            if [ "$BELGRADE_HOUR" = "09" ]; then
               echo "should_run=true" >> "$GITHUB_OUTPUT"
             else
               echo "should_run=false" >> "$GITHUB_OUTPUT"
@@ -69,7 +69,7 @@ jobs:
           MIN_SCORE: "55"
           IMMEDIATE_REWARD_USD: "20"
           URGENT_HOURS: "48"
-          DIGEST_HOUR: "19"
+          DIGEST_HOUR: "9"
           TIMEZONE: Europe/Belgrade
           STATE_PATH: data/state.json
           ALERT_LOG_PATH: data/alerts.jsonl

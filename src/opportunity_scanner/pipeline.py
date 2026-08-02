@@ -57,13 +57,12 @@ class ScannerPipeline:
         return cls(**kwargs)  # type: ignore[arg-type]
 
     def run(self, mode: RunMode, *, now: datetime) -> PipelineResult:
+        self._purge_pending_digest()
         if mode == RunMode.DIGEST:
-            pending: list[ScoredOpportunity] = []
-            for key, item in list(self.state.pending_digest.items()):
-                if not evaluate_safety(item).accepted:
-                    self.state.pending_digest.pop(key, None)
-                    continue
-                pending.append(score_opportunity(item, now=now))
+            pending = [
+                score_opportunity(item, now=now)
+                for item in self.state.pending_digest.values()
+            ]
             message = format_digest(pending, ())
             if message is None:
                 self._save()
@@ -143,6 +142,11 @@ class ScannerPipeline:
                 self.state.queue_digest(opportunity)
         self._save()
         return PipelineResult(tuple(statuses), len(accepted), immediate_sent, 0)
+
+    def _purge_pending_digest(self) -> None:
+        for key, item in list(self.state.pending_digest.items()):
+            if not evaluate_safety(item).accepted:
+                self.state.pending_digest.pop(key, None)
 
     def _save(self) -> None:
         if self.store is not None:

@@ -62,3 +62,29 @@ def test_rejects_github_issue_without_explicit_reward_context() -> None:
 
     assert decision.accepted is False
     assert "reward_not_explicit" in decision.risk_flags
+
+
+def test_rejects_unfunded_github_bounty() -> None:
+    decision = evaluate_safety(
+        make_opportunity(
+            "Funding status: this bounty is not yet created or funded. "
+            "Do not start paid work until funding is confirmed. Reward: 0.99 USDC.",
+            source="github",
+        )
+    )
+
+    assert decision.accepted is False
+    assert "unfunded_bounty" in decision.risk_flags
+
+
+def test_rejects_github_bounty_aggregator() -> None:
+    decision = evaluate_safety(
+        make_opportunity(
+            "Active Bounty Scan Results: 10 new opportunities found, "
+            "including a reward of 100 USDC.",
+            source="github",
+        )
+    )
+
+    assert decision.accepted is False
+    assert "bounty_aggregator" in decision.risk_flags
