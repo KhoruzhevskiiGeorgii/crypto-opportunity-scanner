@@ -56,6 +56,13 @@
       "immediate_sent_at": null,
       "reward_usd": "0.20"
     },
+    "github:4148310577": {
+      "deadline": null,
+      "digest_sent_at": null,
+      "fingerprint": "9bb261c6dec8dc29ae2672a56b48a6df51164f9cd383069d88859d9ae813a89a",
+      "immediate_sent_at": "2026-08-02T11:34:52.388960+00:00",
+      "reward_usd": "100"
+    },
     "github:4227389983": {
       "deadline": "2026-04-08T00:00:00+00:00",
       "digest_sent_at": null,
@@ -253,9 +260,9 @@
       "reward_usd": "0.25"
     },
     "github:5036081336": {
-      "deadline": "2025-11-25T00:00:00+00:00",
+      "deadline": null,
       "digest_sent_at": null,
-      "fingerprint": "72b1051f81d79bff79ff8c424231b28b98d529bb7714e914e08313562549ffd1",
+      "fingerprint": "027c18be8bebf4c3ede01f8ff92d32dadd142285e2301625e7c74f4cda7794d3",
       "immediate_sent_at": null,
       "reward_usd": "0.99"
     },
@@ -433,10 +440,17 @@
       "fingerprint": "1f3e1294a1c2186559d1785f8753304a30d20aee7c70b79c9ca91239613d5dcd",
       "immediate_sent_at": null,
       "reward_usd": "1.5"
+    },
+    "github:5042124082": {
+      "deadline": null,
+      "digest_sent_at": null,
+      "fingerprint": "bcb70cf089b32eede105d808e70177571e69ec3330b3f9c32c94bec79018a7e6",
+      "immediate_sent_at": null,
+      "reward_usd": "0.99"
     }
   },
   "last_success": {
-    "github": "2026-08-02T09:20:40.160082+00:00"
+    "github": "2026-08-02T11:34:52.388960+00:00"
   },
   "pending_digest": {
     "github:3883921310": {
@@ -1136,7 +1150,7 @@
         "good first issue"
       ],
       "confidence": 0.7,
-      "deadline": "2025-11-25T00:00:00+00:00",
+      "deadline": null,
       "discovered_at": "2026-08-01T08:08:27+00:00",
       "expected_cost_usd": "0",
       "kind": "bounty",
@@ -1155,7 +1169,7 @@
       "source_id": "5036081336",
       "summary": "# Require exact MCP protocol-version membership during initialization fallback ## Funding status This child task is being prepared for [Agent Bounties #648](https://github.com/NSPG13/agent-bounties/issues/648). It is not yet created or funded on Base. Do not start paid work until this issue is updated with the canonical child contract, full funding transaction, and the intended solver's confirmed `BountyClaimed` event. Once created as planned, the child target will be exactly 1.00 Base native U…",
       "title": "[Upcoming 0.99 USDC bounty · Shell] Fix one MCP version-negotiation edge case",
-      "updated_at": "2026-08-02T00:35:54+00:00",
+      "updated_at": "2026-08-02T11:06:49+00:00",
       "url": "https://github.com/aiforuseac4-blockchain/mcp-version-negotiation-bounty/issues/1"
     },
     "github:5039065158": {
@@ -1342,6 +1356,33 @@
       "title": "executor: retry loop de exit reduce-only (-2022) após insurance stop já disparado; handoff imediato para reverse reconciliation",
       "updated_at": "2026-08-02T09:07:05+00:00",
       "url": "https://github.com/ldamasio/robson/issues/142"
+    },
+    "github:5042124082": {
+      "categories": [
+        "bounty-alert"
+      ],
+      "confidence": 0.7,
+      "deadline": null,
+      "discovered_at": "2026-08-02T11:18:21+00:00",
+      "expected_cost_usd": "0",
+      "kind": "bounty",
+      "requires_deposit": false,
+      "restrictions": [],
+      "reward": {
+        "amount": "0.99",
+        "currency": "USDC",
+        "kind": "fixed",
+        "text": "0.99 USDC",
+        "usd_value": "0.99"
+      },
+      "risk_flags": [],
+      "skills": [],
+      "source": "github",
+      "source_id": "5042124082",
+      "summary": "### Active Bounty Scan Results **Scan Time:** 2026-08-02 11:18 UTC #### 1. [autogpt-forge-0.2.0: 42 vulnerabilities (highest severity is: 10.0) [master]](https://github.com/rsoreq-mend/AutoGPT/issues/264) - **Repository:** [rsoreq-mend/AutoGPT](https://github.com/rsoreq-mend/AutoGPT) - **Comments:** 4 - **Last Updated:** 2026-08-02T11:07:18Z #### 2. [[Upcoming 0.99 USDC bounty · Shell] Fix one MCP version-negotiation edge case](https://github.com/aiforuseac4-blockchain/mcp-version-negotiation-b…",
+      "title": "🎯 Bounty Alert: 10 New Opportunityies found",
+      "updated_at": "2026-08-02T11:18:21+00:00",
+      "url": "https://github.com/dev-kp-eloper/BountyScout/issues/726"
     }
   },
   "version": 1
