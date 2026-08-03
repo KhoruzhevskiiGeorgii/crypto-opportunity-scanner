@@ -7,6 +7,13 @@
       "immediate_sent_at": "2026-08-02T04:37:20.486920+00:00",
       "reward_usd": "25"
     },
+    "github:3533867537": {
+      "deadline": null,
+      "digest_sent_at": null,
+      "fingerprint": "f80c326582480aebc2c5d9a52cc2084fb4488c4ceb866334e08092bc51ad66aa",
+      "immediate_sent_at": "2026-08-03T10:51:37.061947+00:00",
+      "reward_usd": "2000"
+    },
     "github:3883921310": {
       "deadline": null,
       "digest_sent_at": null,
@@ -167,6 +174,20 @@
       "fingerprint": "be0eb49549a8974629e5600173fba88e7e8fd4f1f552af91436d8248c1f87d8c",
       "immediate_sent_at": "2026-08-02T20:16:54.088439+00:00",
       "reward_usd": "2500"
+    },
+    "github:4870177173": {
+      "deadline": null,
+      "digest_sent_at": null,
+      "fingerprint": "23ed9071a54eb952cbc49d27774f2fb8542f9f8d1ed4a169c8b5e0bb13f07f7b",
+      "immediate_sent_at": "2026-08-03T10:51:37.061947+00:00",
+      "reward_usd": "3000"
+    },
+    "github:4870201132": {
+      "deadline": null,
+      "digest_sent_at": null,
+      "fingerprint": "58b723cf4c7edf6ae3ef2ffad4560807fe5c5d7ae25ef134c71f31834744c222",
+      "immediate_sent_at": "2026-08-03T10:51:37.061947+00:00",
+      "reward_usd": "3000"
     },
     "github:4921509092": {
       "deadline": null,
@@ -492,7 +513,7 @@
     }
   },
   "last_success": {
-    "github": "2026-08-03T04:46:52.983674+00:00"
+    "github": "2026-08-03T10:51:37.061947+00:00"
   },
   "pending_digest": {},
   "version": 1
