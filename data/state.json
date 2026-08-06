@@ -573,10 +573,17 @@
       "fingerprint": "66463cfbd87064f6c1ffaba389a251eeaa981be7ee3e2296d3dfbe3a89450f3c",
       "immediate_sent_at": "2026-08-04T04:30:25.303290+00:00",
       "reward_usd": "6000"
+    },
+    "github:5075467782": {
+      "deadline": null,
+      "digest_sent_at": null,
+      "fingerprint": "9b4988e9a883bb6c19c52cc8b7577fe751691ec83cdce20d0004facc2dea780f",
+      "immediate_sent_at": "2026-08-06T04:30:38.569351+00:00",
+      "reward_usd": "3000"
     }
   },
   "last_success": {
-    "github": "2026-08-05T20:39:15.083809+00:00"
+    "github": "2026-08-06T04:30:38.569351+00:00"
   },
   "pending_digest": {},
   "version": 1
