@@ -322,6 +322,13 @@
       "immediate_sent_at": null,
       "reward_usd": "2.01"
     },
+    "github:4997223957": {
+      "deadline": null,
+      "digest_sent_at": null,
+      "fingerprint": "62d9ae987dca0ca98de8b764a6d02fbd58bdaa423186c1f0d6bde5e0dc79ce6f",
+      "immediate_sent_at": null,
+      "reward_usd": "1"
+    },
     "github:5016411082": {
       "deadline": "2026-07-30T00:00:00+00:00",
       "digest_sent_at": null,
@@ -583,8 +590,41 @@
     }
   },
   "last_success": {
-    "github": "2026-08-06T04:30:38.569351+00:00"
+    "github": "2026-08-06T09:51:19.639968+00:00"
   },
-  "pending_digest": {},
+  "pending_digest": {
+    "github:4997223957": {
+      "categories": [
+        "bounty",
+        "ai-agent-welcome",
+        "payments",
+        "good-first-agent-bounty",
+        "funded-live",
+        "claimable-live"
+      ],
+      "confidence": 0.7,
+      "deadline": null,
+      "discovered_at": "2026-07-28T09:51:10+00:00",
+      "expected_cost_usd": "0",
+      "kind": "bounty",
+      "requires_deposit": false,
+      "restrictions": [],
+      "reward": {
+        "amount": "1",
+        "currency": "USDC",
+        "kind": "fixed",
+        "text": "1 USDC",
+        "usd_value": "1"
+      },
+      "risk_flags": [],
+      "skills": [],
+      "source": "github",
+      "source_id": "4997223957",
+      "summary": "﻿## Goal Create and fully fund a concrete **1 USDC bounty distribution child bounty** that a different registered participant completes and receives canonical settlement for. Completing the parent pays **2 USDC**, producing **1 USDC gross profit** when the child is self-funded at exactly 1 USDC. ## Live payment evidence **Funded and claimable on Base mainnet.** - Routed V3 parent: `0xaf2ea8641af789a0e6489d61a109a023e44fb0cf` - Creation and funding transaction: https://basescan.org/tx/0x664bcf9e…",
+      "title": "[META] Earn 1 USDC margin with a bounty distribution bounty",
+      "updated_at": "2026-08-06T07:49:21+00:00",
+      "url": "https://github.com/NSPG13/agent-bounties/issues/651"
+    }
+  },
   "version": 1
 }
