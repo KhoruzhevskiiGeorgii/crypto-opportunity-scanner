@@ -182,6 +182,13 @@
       "immediate_sent_at": null,
       "reward_usd": "2.000"
     },
+    "github:4697583816": {
+      "deadline": null,
+      "digest_sent_at": null,
+      "fingerprint": "1038d800879334b2d9b23f9980b45922a790313ce7304a2dbf0bea2890552dde",
+      "immediate_sent_at": "2026-08-07T14:19:53.595849+00:00",
+      "reward_usd": "35"
+    },
     "github:4697954151": {
       "deadline": null,
       "digest_sent_at": null,
@@ -611,7 +618,7 @@
     }
   },
   "last_success": {
-    "github": "2026-08-07T08:21:07.418366+00:00"
+    "github": "2026-08-07T14:19:53.595849+00:00"
   },
   "pending_digest": {
     "github:4997223957": {
