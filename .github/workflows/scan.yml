@@ -10,7 +10,8 @@ on:
         type: choice
         options: [scan, digest, recover-alert-log]
   schedule:
-    - cron: "17 1,7,13,19 * * *"
+    - cron: "17 1,13,19 * * *"
+    - cron: "30 6,7 * * *"
     - cron: "23 7,8 * * *"
 
 permissions:
@@ -44,9 +45,18 @@ jobs:
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "mode=${{ inputs.mode }}" >> "$GITHUB_OUTPUT"
             echo "should_run=true" >> "$GITHUB_OUTPUT"
-          elif [ "${{ github.event.schedule }}" = "17 1,7,13,19 * * *" ]; then
+          elif [ "${{ github.event.schedule }}" = "17 1,13,19 * * *" ]; then
             echo "mode=scan" >> "$GITHUB_OUTPUT"
             echo "should_run=true" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event.schedule }}" = "30 6,7 * * *" ]; then
+            BELGRADE_TIME="$(TZ=Europe/Belgrade date '+%H:%M')"
+            echo "mode=scan" >> "$GITHUB_OUTPUT"
+            if [ "$BELGRADE_TIME" = "08:30" ]; then
+              echo "should_run=true" >> "$GITHUB_OUTPUT"
+            else
+              echo "should_run=false" >> "$GITHUB_OUTPUT"
+              echo "Skipping duplicate DST morning scan slot; Belgrade time is $BELGRADE_TIME"
+            fi
           else
             BELGRADE_HOUR="$(TZ=Europe/Belgrade date '+%H')"
             echo "mode=digest" >> "$GITHUB_OUTPUT"
